@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=3 uid="uid://ckgg3wnkhx4dj"]
+
+[ext_resource type="FontFile" uid="uid://dy5nkq305hey" path="res://main_menu/Koulen-Regular.ttf" id="1_4ax0t"]
+[ext_resource type="FontFile" uid="uid://qngqj5bn0l41" path="res://main_menu/PatrickHand-Regular.ttf" id="2_wu52r"]
+[ext_resource type="Script" uid="uid://bd7ah62vwwvxf" path="res://main_menu/change_scenes_menu.gd" id="3_7ndjm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mv3a7"]
+bg_color = Color(0.529412, 0.635294, 0.521569, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(29, 16.36)
+theme_override_styles/panel = SubResource("StyleBoxFlat_mv3a7")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 380.0
+offset_top = -10.0
+offset_right = 741.0
+offset_bottom = 208.0
+theme_override_fonts/font = ExtResource("1_4ax0t")
+theme_override_font_sizes/font_size = 120
+text = "Ajustes"
+language = "pt_BR"
+
+[node name="return_menu" type="Button" parent="."]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 541.0
+offset_right = 267.0
+offset_bottom = 621.0
+theme_override_fonts/font = ExtResource("2_wu52r")
+theme_override_font_sizes/font_size = 35
+text = "Retornar ao Menu"
+flat = true
+language = "pt_BR"
+script = ExtResource("3_7ndjm")
+
+[connection signal="pressed" from="return_menu" to="return_menu" method="_on_menu_pressed"]
