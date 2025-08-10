@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0tmjxmc28aev"
-path="res://.godot/imported/Pacoteria_Maromba.png-6368bc6ce9f5bf7be6be144cbcb104d7.ctex"
+uid="uid://3pxcykh226q7"
+path="res://.godot/imported/Chefe.png-6f9c33cad003aa52d1b4fd0d56fdbc60.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://dias/assets/characters/Pacoteria_Maromba.png"
-dest_files=["res://.godot/imported/Pacoteria_Maromba.png-6368bc6ce9f5bf7be6be144cbcb104d7.ctex"]
+source_file="res://dias/assets/characters/Chefe.png"
+dest_files=["res://.godot/imported/Chefe.png-6f9c33cad003aa52d1b4fd0d56fdbc60.ctex"]
 
 [params]
 
