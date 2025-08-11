@@ -10,17 +10,22 @@ config_version=5
 
 [application]
 
-config/name="esseo"
+config/name="Novo Projeto de Jogo"
 run/main_scene="uid://bviskpb0ajiy6"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 
+[audio]
+
+buses/default_bus_layout="uid://cbjyf1r7w1b0a"
+
 [autoload]
 
-MadTalkGlobals="*res://addons/madtalk/runtime/MadTalkGlobals.tscn"
+AudioPlayer="*res://main_menu/scripts/audio_player.gd"
+MadTalkGlobals="*res://addons/madtalk/runtime/MadTalkGlobals.gd"
 
-[editor_plugins]
+[display]
 
-enabled=PackedStringArray("res://addons/madtalk/plugin.cfg")
+window/stretch/mode="canvas_items"
 
 [rendering]
 
