@@ -1,15 +1,22 @@
-[gd_scene load_steps=9 format=3 uid="uid://c6v611pmtjjbo"]
+[gd_scene load_steps=14 format=3 uid="uid://c6v611pmtjjbo"]
 
 [ext_resource type="Script" uid="uid://84eojlyfkhji" path="res://dias/scripts/dia_01.gd" id="1_1xbhn"]
-[ext_resource type="Texture2D" uid="uid://bt01x8ob3lok2" path="res://dias/assets/cenario.png" id="2_2s8iw"]
+[ext_resource type="Texture2D" uid="uid://bt01x8ob3lok2" path="res://dias/assets/caixas/cenario.png" id="2_2s8iw"]
 [ext_resource type="Script" uid="uid://c6av3xe4m2ujl" path="res://addons/madtalk/runtime/madtalk_runtime.gd" id="3_g4467"]
 [ext_resource type="Texture2D" uid="uid://bisxmemjmsq4c" path="res://dias/assets/dialogo_Caixa.png" id="4_1xbhn"]
 [ext_resource type="FontFile" uid="uid://qngqj5bn0l41" path="res://fonts/PatrickHand-Regular.ttf" id="5_2s8iw"]
 [ext_resource type="Texture2D" uid="uid://dvl4rxk223g35" path="res://dias/assets/characters/Gotique.png" id="6_2s8iw"]
+[ext_resource type="Texture2D" uid="uid://dogtqgux5myju" path="res://dias/assets/caixas/caixa_Velinha.png" id="7_0uxiv"]
+[ext_resource type="Texture2D" uid="uid://bmqlxyxc2rm6a" path="res://dias/assets/caixas/caixa_Crianca.png" id="8_u6i5t"]
+[ext_resource type="Texture2D" uid="uid://bhqxtmd4f4okp" path="res://dias/assets/Tela_Puzzle.png" id="9_tm071"]
+[ext_resource type="PackedScene" uid="uid://birl2q1vkvfkt" path="res://Puzzle/Fase 1/Fase_1.tscn" id="10_86dgt"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1xbhn"]
 
 [sub_resource type="Theme" id="Theme_2s8iw"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b0lkg"]
+texture = ExtResource("9_tm071")
 
 [node name="dia01" type="Node2D"]
 script = ExtResource("1_1xbhn")
@@ -34,6 +41,7 @@ ModulateWhenVisitedInThisDialog = Color(0, 0, 1, 1)
 AutoShowMenuOnLastMessage = true
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="Dialog" type="Control" parent="CanvasLayer2"]
 layout_mode = 3
@@ -95,7 +103,7 @@ metadata/_edit_use_anchors_ = true
 volume_db = -6.0
 
 [node name="Character" type="Node2D" parent="."]
-position = Vector2(188, 317)
+position = Vector2(198, 346)
 
 [node name="Avatar" type="TextureRect" parent="Character"]
 anchors_preset = 8
@@ -113,3 +121,53 @@ theme = SubResource("Theme_2s8iw")
 texture = ExtResource("6_2s8iw")
 expand_mode = 1
 stretch_mode = 5
+
+[node name="velinha_caixa" type="TextureRect" parent="."]
+offset_left = 616.0
+offset_top = 203.0
+offset_right = 1558.0
+offset_bottom = 1163.0
+scale = Vector2(0.171714, 0.168304)
+texture = ExtResource("7_0uxiv")
+
+[node name="velinha_botao" type="Button" parent="velinha_caixa"]
+offset_left = 57.99
+offset_top = 115.979
+offset_right = 1007.99
+offset_bottom = 1083.98
+scale = Vector2(0.887447, 0.76467)
+flat = true
+
+[node name="crianca_caixa" type="TextureRect" parent="."]
+offset_left = 770.0
+offset_top = 367.0
+offset_right = 1712.0
+offset_bottom = 1327.0
+scale = Vector2(0.190611, 0.190611)
+texture = ExtResource("8_u6i5t")
+
+[node name="crianca_botao" type="Button" parent="crianca_caixa"]
+offset_left = 68.2018
+offset_top = 125.911
+offset_right = 1018.2
+offset_bottom = 1093.91
+scale = Vector2(0.887447, 0.76467)
+disabled = true
+flat = true
+
+[node name="Puzzle" type="Panel" parent="."]
+visible = false
+offset_left = 568.0
+offset_top = 3.0
+offset_right = 607.0
+offset_bottom = 44.0
+scale = Vector2(14.1169, 15.7234)
+theme_override_styles/panel = SubResource("StyleBoxTexture_b0lkg")
+
+[node name="Fase1" parent="Puzzle" instance=ExtResource("10_86dgt")]
+visible = false
+position = Vector2(15.8675, 15.073)
+scale = Vector2(0.0485404, 0.0429475)
+
+[connection signal="pressed" from="velinha_caixa/velinha_botao" to="." method="_on_caixa1_pressed"]
+[connection signal="pressed" from="crianca_caixa/crianca_botao" to="." method="_on_caixa2_pressed"]

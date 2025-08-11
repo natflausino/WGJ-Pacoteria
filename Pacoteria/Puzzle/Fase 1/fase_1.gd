@@ -11,7 +11,6 @@ var VCell = [false, false, false, false, false, false, false]
 @export var RCell5: Sprite2D
 @export var RCell6: Sprite2D
 @export var RCell7: Sprite2D
-
 # Busca por nós do tipo 'Button' em toda a hierarquia de descendentes.
 func _ready():
 	var buttons = find_children("", "Button", true)

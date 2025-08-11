@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bt01x8ob3lok2"
-path="res://.godot/imported/cenario.png-945fd84cbe68620f3746dd7d2899ccc9.ctex"
+uid="uid://dogtqgux5myju"
+path="res://.godot/imported/caixa_Velinha.png-2f64282ff99b5c59b6f5541ecaa1e982.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://dias/assets/cenario.png"
-dest_files=["res://.godot/imported/cenario.png-945fd84cbe68620f3746dd7d2899ccc9.ctex"]
+source_file="res://dias/assets/caixas/caixa_Velinha.png"
+dest_files=["res://.godot/imported/caixa_Velinha.png-2f64282ff99b5c59b6f5541ecaa1e982.ctex"]
 
 [params]
 

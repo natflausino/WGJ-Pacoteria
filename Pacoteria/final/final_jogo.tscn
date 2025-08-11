@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://btycolm535o40"]
 
-[ext_resource type="Texture2D" uid="uid://bkfa8cs2nju4q" path="res://final/assets/cenário_Pacotaria.png" id="1_k71y3"]
+[ext_resource type="Texture2D" uid="uid://bkfa8cs2nju4q" path="res://final/assets/cenário_Pacotaria.png" id="1_bwm34"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ivhgw"]
 load_path = "res://.godot/imported/Senhorinha.png-9472297aec5f8092bb9de41ed184284a.ctex"
@@ -88,7 +88,7 @@ offset_left = 1.0
 offset_top = 3.0
 offset_right = 1156.0
 offset_bottom = 652.0
-texture = ExtResource("1_k71y3")
+texture = ExtResource("1_bwm34")
 expand_mode = 1
 stretch_mode = 4
 
