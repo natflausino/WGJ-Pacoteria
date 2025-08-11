@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="DialogData" load_steps=18 format=3 uid="uid://dxkjjrap15vxu"]
+[gd_resource type="Resource" script_class="DialogData" load_steps=29 format=3 uid="uid://dxkjjrap15vxu"]
 
 [ext_resource type="Script" uid="uid://bw2q2eucjkylk" path="res://addons/madtalk/components/resources/DialogData.gd" id="1_giduu"]
 [ext_resource type="Script" uid="uid://c2bv5lwcvdmrb" path="res://addons/madtalk/components/resources/DialogNodeItemData.gd" id="2_48vp3"]
@@ -178,6 +178,172 @@ position = Vector2(480, 0)
 comment = ""
 items = [SubResource("6yf53"), SubResource("wspnu"), SubResource("0mplr")]
 options = []
+continue_sequence_id = 3
+continue_port_index = 0
+
+[sub_resource type="Resource" id="fjjv5"]
+script = ExtResource("2_48vp3")
+item_type = 0
+connected_to_id = -1
+message_speaker_id = "Crianca"
+message_speaker_variant = "Crianca"
+message_voice_clip = ""
+message_text = "MOÇO MINHA ENCOMENDA JÁ CHEGOU? JÁ CHEGOU? JÁ CHEGOU?
+"
+message_voice_clip_locales = {}
+message_text_locales = {}
+message_hide_on_end = 0
+condition_type = 10
+condition_values = []
+effect_type = 10
+effect_values = []
+
+[sub_resource type="Resource" id="itwqu"]
+script = ExtResource("2_48vp3")
+item_type = 0
+connected_to_id = -1
+message_speaker_id = "robo"
+message_speaker_variant = ""
+message_voice_clip = ""
+message_text = "É...oi! Eu vou chec-"
+message_voice_clip_locales = {}
+message_text_locales = {}
+message_hide_on_end = 0
+condition_type = 10
+condition_values = []
+effect_type = 10
+effect_values = []
+
+[sub_resource type="Resource" id="wjaa2"]
+script = ExtResource("2_48vp3")
+item_type = 0
+connected_to_id = -1
+message_speaker_id = "Crianca"
+message_speaker_variant = "Crianca"
+message_voice_clip = ""
+message_text = "DIZ QUE CHEGOU POR FAVOR!! SÃO OS PATINS SUPER MEGA 3000 RÁPIDOS E VELOZES!! MINHA MÃE DISSE QUE CHEGARIAM HOJE ATÉ PORQUE VOCÊS SÃO AS SERPENTES VELOZES E ISSO É MUITO DAORA!!"
+message_voice_clip_locales = {}
+message_text_locales = {}
+message_hide_on_end = 0
+condition_type = 10
+condition_values = []
+effect_type = 10
+effect_values = []
+
+[sub_resource type="Resource" id="Resource_v4udn"]
+script = ExtResource("2_48vp3")
+item_type = 0
+connected_to_id = -1
+message_speaker_id = "robo"
+message_speaker_variant = ""
+message_voice_clip = ""
+message_text = "Ok, ok, vou ver-"
+message_voice_clip_locales = {}
+message_text_locales = {}
+message_hide_on_end = 0
+condition_type = 10
+condition_values = []
+effect_type = 10
+effect_values = []
+
+[sub_resource type="Resource" id="Resource_kur6e"]
+script = ExtResource("2_48vp3")
+item_type = 0
+connected_to_id = -1
+message_speaker_id = "Crianca"
+message_speaker_variant = ""
+message_voice_clip = ""
+message_text = "SO NÃO FALA PRA MINHA MÃE QUE EU VIM AQUI ELA ACHA QUE EU ESTOU NA ESCOLA"
+message_voice_clip_locales = {}
+message_text_locales = {}
+message_hide_on_end = 0
+condition_type = 10
+condition_values = []
+effect_type = 10
+effect_values = []
+
+[sub_resource type="Resource" id="Resource_gi4cx"]
+script = ExtResource("2_48vp3")
+item_type = 0
+connected_to_id = -1
+message_speaker_id = "robo"
+message_speaker_variant = ""
+message_voice_clip = ""
+message_text = "..."
+message_voice_clip_locales = {}
+message_text_locales = {}
+message_hide_on_end = 0
+condition_type = 10
+condition_values = []
+effect_type = 10
+effect_values = []
+
+[sub_resource type="Resource" id="f70uc"]
+script = ExtResource("4_f2ijm")
+sequence_id = 3
+position = Vector2(-300, 380)
+comment = ""
+items = [SubResource("fjjv5"), SubResource("itwqu"), SubResource("wjaa2"), SubResource("Resource_v4udn"), SubResource("Resource_kur6e"), SubResource("Resource_gi4cx")]
+options = []
+continue_sequence_id = 4
+continue_port_index = 0
+
+[sub_resource type="Resource" id="Resource_mjnvi"]
+script = ExtResource("2_48vp3")
+item_type = 0
+connected_to_id = -1
+message_speaker_id = "Crianca"
+message_speaker_variant = "Crianca"
+message_voice_clip = ""
+message_text = "SÃO ELES MESMO!! QUE CAIXA DAORAAA! MUITO! MUITO! OBRIGADO MOÇO! SABE, EU QUERO SER ALTO QUE NEM VOCÊ QUANDO EU CRESCER!!
+"
+message_voice_clip_locales = {}
+message_text_locales = {}
+message_hide_on_end = 0
+condition_type = 10
+condition_values = []
+effect_type = 10
+effect_values = []
+
+[sub_resource type="Resource" id="Resource_uwwod"]
+script = ExtResource("2_48vp3")
+item_type = 0
+connected_to_id = -1
+message_speaker_id = "robo"
+message_speaker_variant = ""
+message_voice_clip = ""
+message_text = "Muito obri-"
+message_voice_clip_locales = {}
+message_text_locales = {}
+message_hide_on_end = 0
+condition_type = 10
+condition_values = []
+effect_type = 10
+effect_values = []
+
+[sub_resource type="Resource" id="Resource_ig706"]
+script = ExtResource("2_48vp3")
+item_type = 0
+connected_to_id = -1
+message_speaker_id = "robo"
+message_speaker_variant = "robo"
+message_voice_clip = ""
+message_text = "Ué, ele saiu correndo"
+message_voice_clip_locales = {}
+message_text_locales = {}
+message_hide_on_end = 0
+condition_type = 10
+condition_values = []
+effect_type = 10
+effect_values = []
+
+[sub_resource type="Resource" id="Resource_uj1nl"]
+script = ExtResource("4_f2ijm")
+sequence_id = 4
+position = Vector2(120, 400)
+comment = ""
+items = [SubResource("Resource_mjnvi"), SubResource("Resource_uwwod"), SubResource("Resource_ig706")]
+options = []
 continue_sequence_id = -1
 continue_port_index = 0
 
@@ -185,8 +351,8 @@ continue_port_index = 0
 script = ExtResource("5_vkpn8")
 sheet_id = "dialogo_inicial"
 sheet_description = ""
-next_sequence_id = 3
-nodes = [SubResource("Resource_6yf53"), SubResource("fl4st"), SubResource("mjnvi")]
+next_sequence_id = 5
+nodes = [SubResource("Resource_6yf53"), SubResource("fl4st"), SubResource("mjnvi"), SubResource("f70uc"), SubResource("Resource_uj1nl")]
 
 [resource]
 script = ExtResource("1_giduu")
