@@ -1,32 +1,15 @@
-[gd_resource type="Resource" script_class="DialogData" load_steps=34 format=3 uid="uid://dxkjjrap15vxu"]
+[gd_resource type="Resource" script_class="DialogData" load_steps=73 format=3 uid="uid://dxkjjrap15vxu"]
 
 [ext_resource type="Script" uid="uid://bw2q2eucjkylk" path="res://addons/madtalk/components/resources/DialogData.gd" id="1_giduu"]
 [ext_resource type="Script" uid="uid://c2bv5lwcvdmrb" path="res://addons/madtalk/components/resources/DialogNodeItemData.gd" id="2_48vp3"]
 [ext_resource type="Script" uid="uid://b2mrnotqjr75d" path="res://addons/madtalk/components/resources/DialogNodeData.gd" id="4_f2ijm"]
 [ext_resource type="Script" uid="uid://butd1fwy4a2hn" path="res://addons/madtalk/components/resources/DialogSheetData.gd" id="5_vkpn8"]
 
-[sub_resource type="Resource" id="ktw87"]
-script = ExtResource("4_f2ijm")
-sequence_id = 0
-position = Vector2(0, 0)
-comment = ""
-items = []
-options = []
-continue_sequence_id = -1
-continue_port_index = 0
-
-[sub_resource type="Resource" id="2s8iw"]
-script = ExtResource("5_vkpn8")
-sheet_id = "final_senhorinha"
-sheet_description = ""
-next_sequence_id = 1
-nodes = [SubResource("ktw87")]
-
 [sub_resource type="Resource" id="gi4cx"]
 script = ExtResource("2_48vp3")
 item_type = 0
 connected_to_id = -1
-message_speaker_id = "robo"
+message_speaker_id = "protagonista"
 message_speaker_variant = ""
 message_voice_clip = ""
 message_text = "Ah... segunda feira, como eu amo! Começa mais uma semana de trabalho maravilhoso! Espero conseguir entregar várias encomendas hoje! Afinal de contas, as Serpentes Velozes são a agência mais rápida da cidade!"
@@ -44,7 +27,7 @@ effect_values = []
 script = ExtResource("2_48vp3")
 item_type = 0
 connected_to_id = -1
-message_speaker_id = "robo"
+message_speaker_id = "protagonista"
 message_speaker_variant = ""
 message_voice_clip = ""
 message_text = "Já chequei o caixa, limpei a mesa, está tudo pronto para receber os clientes! O chefe anda meio paranoico com a segurança da encomendas, então ele instalou um sistema novo... preciso desativá-lo toda vez que retirar uma caixa."
@@ -60,7 +43,7 @@ effect_values = []
 script = ExtResource("2_48vp3")
 item_type = 0
 connected_to_id = -1
-message_speaker_id = "robo"
+message_speaker_id = "protagonista"
 message_speaker_variant = ""
 message_voice_clip = ""
 message_text = "De qualquer modo, vamos começar o expediente!"
@@ -86,10 +69,26 @@ continue_port_index = 0
 script = ExtResource("2_48vp3")
 item_type = 0
 connected_to_id = -1
-message_speaker_id = "robo"
+message_speaker_id = "protagonista"
 message_speaker_variant = ""
 message_voice_clip = ""
-message_text = "Ah... minha primeira cliente do dia! Bom dia senhora, o que posso ajudar?"
+message_text = "Ah... minha primeira cliente do dia!"
+message_voice_clip_locales = {}
+message_text_locales = {}
+message_hide_on_end = 0
+condition_type = 10
+condition_values = []
+effect_type = 10
+effect_values = []
+
+[sub_resource type="Resource" id="eeq8g"]
+script = ExtResource("2_48vp3")
+item_type = 0
+connected_to_id = -1
+message_speaker_id = "protagonista"
+message_speaker_variant = "Senhorinha"
+message_voice_clip = ""
+message_text = "Bom dia senhora, o que posso ajudar?"
 message_voice_clip_locales = {}
 message_text_locales = {}
 message_hide_on_end = 0
@@ -105,7 +104,7 @@ connected_to_id = -1
 message_speaker_id = "Senhorinha"
 message_speaker_variant = "Senhorinha"
 message_voice_clip = ""
-message_text = "Bom dia querido, mas que agência linda! Vim buscar um pacotinho... minha neta disse que estaria aqui."
+message_text = "Cliente: Bom dia querido, mas que agência linda! Vim buscar um pacotinho... minha neta disse que estaria aqui."
 message_voice_clip_locales = {}
 message_text_locales = {}
 message_hide_on_end = 0
@@ -118,8 +117,8 @@ effect_values = []
 script = ExtResource("2_48vp3")
 item_type = 0
 connected_to_id = -1
-message_speaker_id = "robo"
-message_speaker_variant = ""
+message_speaker_id = "protagonista"
+message_speaker_variant = "Senhorinha"
 message_voice_clip = ""
 message_text = "Mas é claro senhora, so peço que aguarde um instante!"
 message_voice_clip_locales = {}
@@ -135,19 +134,19 @@ script = ExtResource("4_f2ijm")
 sequence_id = 1
 position = Vector2(320, -40)
 comment = ""
-items = [SubResource("v4udn"), SubResource("kur6e"), SubResource("Resource_fl4st")]
+items = [SubResource("v4udn"), SubResource("eeq8g"), SubResource("kur6e"), SubResource("Resource_fl4st")]
 options = []
 continue_sequence_id = -1
 continue_port_index = 0
 
-[sub_resource type="Resource" id="wspnu"]
+[sub_resource type="Resource" id="6yf53"]
 script = ExtResource("2_48vp3")
 item_type = 0
 connected_to_id = -1
-message_speaker_id = "Senhorinha"
+message_speaker_id = "protagonista"
 message_speaker_variant = "Senhorinha"
 message_voice_clip = ""
-message_text = "Muito obrigado querido. Você é muito inteligente! Eu não sei mexer com essas tecnologias... sempre peço para meus netinhos me ajudarem."
+message_text = "Aqui está, senhora!"
 message_voice_clip_locales = {}
 message_text_locales = {}
 message_hide_on_end = 0
@@ -156,14 +155,14 @@ condition_values = []
 effect_type = 10
 effect_values = []
 
-[sub_resource type="Resource" id="6yf53"]
+[sub_resource type="Resource" id="wspnu"]
 script = ExtResource("2_48vp3")
 item_type = 0
 connected_to_id = -1
-message_speaker_id = "robo"
-message_speaker_variant = ""
+message_speaker_id = "Senhorinha"
+message_speaker_variant = "Senhorinha"
 message_voice_clip = ""
-message_text = "Aqui está senhora!"
+message_text = "Cliente: Muito obrigado querido. Você é muito inteligente! Eu não sei mexer com essas tecnologias... sempre peço para meus netinhos me ajudarem."
 message_voice_clip_locales = {}
 message_text_locales = {}
 message_hide_on_end = 0
@@ -176,10 +175,10 @@ effect_values = []
 script = ExtResource("2_48vp3")
 item_type = 0
 connected_to_id = -1
-message_speaker_id = "robo"
+message_speaker_id = "protagonista"
 message_speaker_variant = ""
 message_voice_clip = ""
-message_text = "Ah... acho que tenho um padrão de inteligência normal? Mas agradeço o elogio!"
+message_text = "Ah... acho que tenho um padrão de inteligência normal? Mas agradeço o elogio! Tenha um bom dia."
 message_voice_clip_locales = {}
 message_text_locales = {}
 message_hide_on_end = 0
@@ -193,7 +192,7 @@ script = ExtResource("4_f2ijm")
 sequence_id = 2
 position = Vector2(-660, 320)
 comment = ""
-items = [SubResource("wspnu"), SubResource("6yf53"), SubResource("0mplr")]
+items = [SubResource("6yf53"), SubResource("wspnu"), SubResource("0mplr")]
 options = []
 continue_sequence_id = 3
 continue_port_index = 0
@@ -205,7 +204,7 @@ connected_to_id = -1
 message_speaker_id = "Crianca"
 message_speaker_variant = "Crianca"
 message_voice_clip = ""
-message_text = "MOÇO MINHA ENCOMENDA JÁ CHEGOU? JÁ CHEGOU? JÁ CHEGOU?
+message_text = "Cliente: MOÇO MINHA ENCOMENDA JÁ CHEGOU? JÁ CHEGOU? JÁ CHEGOU?
 "
 message_voice_clip_locales = {}
 message_text_locales = {}
@@ -219,8 +218,8 @@ effect_values = []
 script = ExtResource("2_48vp3")
 item_type = 0
 connected_to_id = -1
-message_speaker_id = "robo"
-message_speaker_variant = ""
+message_speaker_id = "protagonista"
+message_speaker_variant = "Crianca"
 message_voice_clip = ""
 message_text = "É...oi! Eu vou chec-"
 message_voice_clip_locales = {}
@@ -238,7 +237,7 @@ connected_to_id = -1
 message_speaker_id = "Crianca"
 message_speaker_variant = "Crianca"
 message_voice_clip = ""
-message_text = "DIZ QUE CHEGOU POR FAVOR!! SÃO OS PATINS SUPER MEGA 3000 RÁPIDOS E VELOZES!! MINHA MÃE DISSE QUE CHEGARIAM HOJE ATÉ PORQUE VOCÊS SÃO AS SERPENTES VELOZES E ISSO É MUITO DAORA!!"
+message_text = "Cliente: DIZ QUE CHEGOU POR FAVOR!! SÃO OS PATINS SUPER MEGA 3000 RÁPIDOS E VELOZES!! MINHA MÃE DISSE QUE CHEGARIAM HOJE ATÉ PORQUE VOCÊS SÃO AS SERPENTES VELOZES E ISSO É MUITO DAORA!!"
 message_voice_clip_locales = {}
 message_text_locales = {}
 message_hide_on_end = 0
@@ -251,8 +250,8 @@ effect_values = []
 script = ExtResource("2_48vp3")
 item_type = 0
 connected_to_id = -1
-message_speaker_id = "robo"
-message_speaker_variant = ""
+message_speaker_id = "protagonista"
+message_speaker_variant = "Crianca"
 message_voice_clip = ""
 message_text = "Ok, ok, vou ver-"
 message_voice_clip_locales = {}
@@ -268,9 +267,9 @@ script = ExtResource("2_48vp3")
 item_type = 0
 connected_to_id = -1
 message_speaker_id = "Crianca"
-message_speaker_variant = ""
+message_speaker_variant = "Crianca"
 message_voice_clip = ""
-message_text = "SO NÃO FALA PRA MINHA MÃE QUE EU VIM AQUI ELA ACHA QUE EU ESTOU NA ESCOLA"
+message_text = "Cliente: SO NÃO FALA PRA MINHA MÃE QUE EU VIM AQUI ELA ACHA QUE EU ESTOU NA ESCOLA"
 message_voice_clip_locales = {}
 message_text_locales = {}
 message_hide_on_end = 0
@@ -283,10 +282,26 @@ effect_values = []
 script = ExtResource("2_48vp3")
 item_type = 0
 connected_to_id = -1
-message_speaker_id = "robo"
-message_speaker_variant = ""
+message_speaker_id = "protagonista"
+message_speaker_variant = "Crianca"
 message_voice_clip = ""
-message_text = "..."
+message_text = "... ..."
+message_voice_clip_locales = {}
+message_text_locales = {}
+message_hide_on_end = 0
+condition_type = 10
+condition_values = []
+effect_type = 10
+effect_values = []
+
+[sub_resource type="Resource" id="7pl77"]
+script = ExtResource("2_48vp3")
+item_type = 0
+connected_to_id = -1
+message_speaker_id = "protagonista"
+message_speaker_variant = "Crianca"
+message_voice_clip = ""
+message_text = "Certo, eu nem poderia"
 message_voice_clip_locales = {}
 message_text_locales = {}
 message_hide_on_end = 0
@@ -300,10 +315,26 @@ script = ExtResource("4_f2ijm")
 sequence_id = 3
 position = Vector2(-240, 500)
 comment = ""
-items = [SubResource("fjjv5"), SubResource("itwqu"), SubResource("wjaa2"), SubResource("Resource_v4udn"), SubResource("Resource_kur6e"), SubResource("Resource_gi4cx")]
+items = [SubResource("fjjv5"), SubResource("itwqu"), SubResource("wjaa2"), SubResource("Resource_v4udn"), SubResource("Resource_kur6e"), SubResource("Resource_gi4cx"), SubResource("7pl77")]
 options = []
 continue_sequence_id = -1
 continue_port_index = 0
+
+[sub_resource type="Resource" id="Resource_1e8bj"]
+script = ExtResource("2_48vp3")
+item_type = 0
+connected_to_id = -1
+message_speaker_id = "protagonista"
+message_speaker_variant = ""
+message_voice_clip = ""
+message_text = "O pacote registrado seria ess-?"
+message_voice_clip_locales = {}
+message_text_locales = {}
+message_hide_on_end = 0
+condition_type = 10
+condition_values = []
+effect_type = 10
+effect_values = []
 
 [sub_resource type="Resource" id="Resource_mjnvi"]
 script = ExtResource("2_48vp3")
@@ -312,7 +343,7 @@ connected_to_id = -1
 message_speaker_id = "Crianca"
 message_speaker_variant = "Crianca"
 message_voice_clip = ""
-message_text = "SÃO ELES MESMO!! QUE CAIXA DAORAAA! MUITO! MUITO! OBRIGADO MOÇO! SABE, EU QUERO SER ALTO QUE NEM VOCÊ QUANDO EU CRESCER!!
+message_text = "Cliente: SÃO ELES MESMO!! QUE CAIXA DAORAAA! MUITO! MUITO! OBRIGADO MOÇO! SABE, EU QUERO SER ALTO QUE NEM VOCÊ QUANDO EU CRESCER!!
 "
 message_voice_clip_locales = {}
 message_text_locales = {}
@@ -326,7 +357,7 @@ effect_values = []
 script = ExtResource("2_48vp3")
 item_type = 0
 connected_to_id = -1
-message_speaker_id = "robo"
+message_speaker_id = "protagonista"
 message_speaker_variant = ""
 message_voice_clip = ""
 message_text = "Muito obri-"
@@ -342,10 +373,10 @@ effect_values = []
 script = ExtResource("2_48vp3")
 item_type = 0
 connected_to_id = -1
-message_speaker_id = "robo"
+message_speaker_id = "protagonista"
 message_speaker_variant = "robo"
 message_voice_clip = ""
-message_text = "Ué, ele saiu correndo"
+message_text = "E ele saiu correndo..."
 message_voice_clip_locales = {}
 message_text_locales = {}
 message_hide_on_end = 0
@@ -359,7 +390,7 @@ script = ExtResource("4_f2ijm")
 sequence_id = 4
 position = Vector2(260, 440)
 comment = ""
-items = [SubResource("Resource_mjnvi"), SubResource("Resource_uwwod"), SubResource("Resource_ig706")]
+items = [SubResource("Resource_1e8bj"), SubResource("Resource_mjnvi"), SubResource("Resource_uwwod"), SubResource("Resource_ig706")]
 options = []
 continue_sequence_id = 5
 continue_port_index = 0
@@ -371,7 +402,7 @@ connected_to_id = -1
 message_speaker_id = "Chefe"
 message_speaker_variant = "Chefe"
 message_voice_clip = ""
-message_text = "Que dia produtivo hein! Foram todas as entregas de hoje, está de parabéns, pode ir se recolher."
+message_text = "Chefe: Que dia produtivo hein! Foram todas as entregas de hoje, está de parabéns!"
 message_voice_clip_locales = {}
 message_text_locales = {}
 message_hide_on_end = 0
@@ -384,10 +415,42 @@ effect_values = []
 script = ExtResource("2_48vp3")
 item_type = 0
 connected_to_id = -1
-message_speaker_id = "robo"
+message_speaker_id = "protagonista"
 message_speaker_variant = ""
 message_voice_clip = ""
-message_text = "Obrigado chefe, já estou indo."
+message_text = "Obrigado chefe!"
+message_voice_clip_locales = {}
+message_text_locales = {}
+message_hide_on_end = 0
+condition_type = 10
+condition_values = []
+effect_type = 10
+effect_values = []
+
+[sub_resource type="Resource" id="Resource_ogynd"]
+script = ExtResource("2_48vp3")
+item_type = 0
+connected_to_id = -1
+message_speaker_id = "Chefe"
+message_speaker_variant = "Chefe"
+message_voice_clip = ""
+message_text = "Chefe: Está dispensado, pode ir se recolher."
+message_voice_clip_locales = {}
+message_text_locales = {}
+message_hide_on_end = 0
+condition_type = 10
+condition_values = []
+effect_type = 10
+effect_values = []
+
+[sub_resource type="Resource" id="Resource_iyv7e"]
+script = ExtResource("2_48vp3")
+item_type = 0
+connected_to_id = -1
+message_speaker_id = "protagonista"
+message_speaker_variant = ""
+message_voice_clip = ""
+message_text = "Certo, já estou indo"
 message_voice_clip_locales = {}
 message_text_locales = {}
 message_hide_on_end = 0
@@ -401,7 +464,7 @@ script = ExtResource("4_f2ijm")
 sequence_id = 5
 position = Vector2(680, 780)
 comment = ""
-items = [SubResource("Resource_6d3fn"), SubResource("Resource_86kbs")]
+items = [SubResource("Resource_6d3fn"), SubResource("Resource_86kbs"), SubResource("Resource_ogynd"), SubResource("Resource_iyv7e")]
 options = []
 continue_sequence_id = -1
 continue_port_index = 0
@@ -410,13 +473,543 @@ continue_port_index = 0
 script = ExtResource("5_vkpn8")
 sheet_id = "dialogue_day1"
 sheet_description = ""
-next_sequence_id = 6
+next_sequence_id = 7
 nodes = [SubResource("Resource_6yf53"), SubResource("fl4st"), SubResource("mjnvi"), SubResource("f70uc"), SubResource("Resource_uj1nl"), SubResource("Resource_m2qb1")]
+
+[sub_resource type="Resource" id="ejdvo"]
+script = ExtResource("2_48vp3")
+item_type = 0
+connected_to_id = -1
+message_speaker_id = "protagonista"
+message_speaker_variant = ""
+message_voice_clip = ""
+message_text = "Quase me atrasei hoje, cheguei só meia hora mais cedo. Não posso correr esse risco, eu amo muito aqui! Acho que o chefe não notou pelo menos"
+message_voice_clip_locales = {}
+message_text_locales = {}
+message_hide_on_end = 0
+condition_type = 10
+condition_values = []
+effect_type = 10
+effect_values = []
+
+[sub_resource type="Resource" id="c4vl6"]
+script = ExtResource("2_48vp3")
+item_type = 0
+connected_to_id = -1
+message_speaker_id = "protagonista"
+message_speaker_variant = ""
+message_voice_clip = ""
+message_text = "Deu tempo de conferir o caixa e deixar tudo organizado... Ufa!"
+message_voice_clip_locales = {}
+message_text_locales = {}
+message_hide_on_end = 0
+condition_type = 10
+condition_values = []
+effect_type = 10
+effect_values = []
+
+[sub_resource type="Resource" id="bmmcm"]
+script = ExtResource("2_48vp3")
+item_type = 0
+connected_to_id = -1
+message_speaker_id = "Gotique"
+message_speaker_variant = "Gotique"
+message_voice_clip = ""
+message_text = "Cliente: ..."
+message_voice_clip_locales = {}
+message_text_locales = {}
+message_hide_on_end = 0
+condition_type = 10
+condition_values = []
+effect_type = 10
+effect_values = []
+
+[sub_resource type="Resource" id="f0glg"]
+script = ExtResource("2_48vp3")
+item_type = 0
+connected_to_id = -1
+message_speaker_id = "protagonista"
+message_speaker_variant = "Gotique"
+message_voice_clip = ""
+message_text = "Olá? O que você precisa hoje?"
+message_voice_clip_locales = {}
+message_text_locales = {}
+message_hide_on_end = 0
+condition_type = 10
+condition_values = []
+effect_type = 10
+effect_values = []
+
+[sub_resource type="Resource" id="xejbt"]
+script = ExtResource("2_48vp3")
+item_type = 0
+connected_to_id = -1
+message_speaker_id = "Gotique"
+message_speaker_variant = "Gotique"
+message_voice_clip = ""
+message_text = "Cliente: Eu preciso da minha caixa. E não olha o que tem dentro.
+É sério!"
+message_voice_clip_locales = {}
+message_text_locales = {}
+message_hide_on_end = 0
+condition_type = 10
+condition_values = []
+effect_type = 10
+effect_values = []
+
+[sub_resource type="Resource" id="rj87f"]
+script = ExtResource("2_48vp3")
+item_type = 0
+connected_to_id = -1
+message_speaker_id = "protagonista"
+message_speaker_variant = "Gotique"
+message_voice_clip = ""
+message_text = "Tudo bem... Eu nem posso fazer isso"
+message_voice_clip_locales = {}
+message_text_locales = {}
+message_hide_on_end = 0
+condition_type = 10
+condition_values = []
+effect_type = 10
+effect_values = []
+
+[sub_resource type="Resource" id="mplk6"]
+script = ExtResource("2_48vp3")
+item_type = 0
+connected_to_id = -1
+message_speaker_id = "Gotique"
+message_speaker_variant = "Gotique"
+message_voice_clip = ""
+message_text = "Cliente: Humph. Bom mesmo"
+message_voice_clip_locales = {}
+message_text_locales = {}
+message_hide_on_end = 0
+condition_type = 10
+condition_values = []
+effect_type = 10
+effect_values = []
+
+[sub_resource type="Resource" id="ktw87"]
+script = ExtResource("4_f2ijm")
+sequence_id = 0
+position = Vector2(-20, -80)
+comment = ""
+items = [SubResource("ejdvo"), SubResource("c4vl6"), SubResource("bmmcm"), SubResource("f0glg"), SubResource("xejbt"), SubResource("rj87f"), SubResource("mplk6")]
+options = []
+continue_sequence_id = -1
+continue_port_index = 0
+
+[sub_resource type="Resource" id="0mh86"]
+script = ExtResource("2_48vp3")
+item_type = 0
+connected_to_id = -1
+message_speaker_id = "protagonista"
+message_speaker_variant = ""
+message_voice_clip = ""
+message_text = "É uma bela caixa, bem brilhante!"
+message_voice_clip_locales = {}
+message_text_locales = {}
+message_hide_on_end = 0
+condition_type = 10
+condition_values = []
+effect_type = 10
+effect_values = []
+
+[sub_resource type="Resource" id="xtnra"]
+script = ExtResource("2_48vp3")
+item_type = 0
+connected_to_id = -1
+message_speaker_id = "Gotique"
+message_speaker_variant = ""
+message_voice_clip = ""
+message_text = "Cliente: Você não viu nada!"
+message_voice_clip_locales = {}
+message_text_locales = {}
+message_hide_on_end = 0
+condition_type = 10
+condition_values = []
+effect_type = 10
+effect_values = []
+
+[sub_resource type="Resource" id="g70kg"]
+script = ExtResource("2_48vp3")
+item_type = 0
+connected_to_id = -1
+message_speaker_id = "protagonista"
+message_speaker_variant = ""
+message_voice_clip = ""
+message_text = "Não vi mesmo e volte sempre!"
+message_voice_clip_locales = {}
+message_text_locales = {}
+message_hide_on_end = 0
+condition_type = 10
+condition_values = []
+effect_type = 10
+effect_values = []
+
+[sub_resource type="Resource" id="bk5rd"]
+script = ExtResource("2_48vp3")
+item_type = 0
+connected_to_id = -1
+message_speaker_id = "Gotique"
+message_speaker_variant = ""
+message_voice_clip = ""
+message_text = "Humph... Obrigade"
+message_voice_clip_locales = {}
+message_text_locales = {}
+message_hide_on_end = 0
+condition_type = 10
+condition_values = []
+effect_type = 10
+effect_values = []
+
+[sub_resource type="Resource" id="14klr"]
+script = ExtResource("2_48vp3")
+item_type = 0
+connected_to_id = -1
+message_speaker_id = "protagonista"
+message_speaker_variant = ""
+message_voice_clip = ""
+message_text = "Por nada, tenha um bom dia."
+message_voice_clip_locales = {}
+message_text_locales = {}
+message_hide_on_end = 0
+condition_type = 10
+condition_values = []
+effect_type = 10
+effect_values = []
+
+[sub_resource type="Resource" id="tvhw6"]
+script = ExtResource("4_f2ijm")
+sequence_id = 1
+position = Vector2(420, 100)
+comment = ""
+items = [SubResource("0mh86"), SubResource("xtnra"), SubResource("g70kg"), SubResource("bk5rd"), SubResource("14klr")]
+options = []
+continue_sequence_id = 2
+continue_port_index = 0
+
+[sub_resource type="Resource" id="3qxu4"]
+script = ExtResource("2_48vp3")
+item_type = 0
+connected_to_id = -1
+message_speaker_id = "protagonista"
+message_speaker_variant = ""
+message_voice_clip = ""
+message_text = "Bom dia, Senhora. O que gostaria?"
+message_voice_clip_locales = {}
+message_text_locales = {}
+message_hide_on_end = 0
+condition_type = 10
+condition_values = []
+effect_type = 10
+effect_values = []
+
+[sub_resource type="Resource" id="Resource_dsmgf"]
+script = ExtResource("2_48vp3")
+item_type = 0
+connected_to_id = -1
+message_speaker_id = "Senhorinha"
+message_speaker_variant = "Senhorinha"
+message_voice_clip = ""
+message_text = "Cliente: Bom dia, querido! Eu te trouxe uma torta, não sei se você come isso, mas queria agradecer pelo bom serviço ontem”"
+message_voice_clip_locales = {}
+message_text_locales = {}
+message_hide_on_end = 0
+condition_type = 10
+condition_values = []
+effect_type = 10
+effect_values = []
+
+[sub_resource type="Resource" id="Resource_fwb2u"]
+script = ExtResource("2_48vp3")
+item_type = 0
+connected_to_id = -1
+message_speaker_id = "protagonista"
+message_speaker_variant = ""
+message_voice_clip = ""
+message_text = "Nossa... acho que eu nunca comi isso. Eu posso tentar, obrigado!"
+message_voice_clip_locales = {}
+message_text_locales = {}
+message_hide_on_end = 0
+condition_type = 10
+condition_values = []
+effect_type = 10
+effect_values = []
+
+[sub_resource type="Resource" id="Resource_1yy6g"]
+script = ExtResource("2_48vp3")
+item_type = 0
+connected_to_id = -1
+message_speaker_id = "Senhorinha"
+message_speaker_variant = "Senhorinha"
+message_voice_clip = ""
+message_text = "Não tem de que! Queria meu pacotinho, por favor."
+message_voice_clip_locales = {}
+message_text_locales = {}
+message_hide_on_end = 0
+condition_type = 10
+condition_values = []
+effect_type = 10
+effect_values = []
+
+[sub_resource type="Resource" id="2vy4m"]
+script = ExtResource("4_f2ijm")
+sequence_id = 2
+position = Vector2(834.218, 163.031)
+comment = ""
+items = [SubResource("3qxu4"), SubResource("Resource_dsmgf"), SubResource("Resource_fwb2u"), SubResource("Resource_1yy6g")]
+options = []
+continue_sequence_id = -1
+continue_port_index = 0
+
+[sub_resource type="Resource" id="Resource_ghijk"]
+script = ExtResource("2_48vp3")
+item_type = 0
+connected_to_id = -1
+message_speaker_id = "Senhorinha"
+message_speaker_variant = "Senhorinha"
+message_voice_clip = ""
+message_text = "Muito obrigada, meu querido... Você é uma graça, os jovens deveriam ser mais como você."
+message_voice_clip_locales = {}
+message_text_locales = {}
+message_hide_on_end = 0
+condition_type = 10
+condition_values = []
+effect_type = 10
+effect_values = []
+
+[sub_resource type="Resource" id="Resource_t2a6b"]
+script = ExtResource("2_48vp3")
+item_type = 0
+connected_to_id = -1
+message_speaker_id = "protagonista"
+message_speaker_variant = ""
+message_voice_clip = ""
+message_text = "Ah... Obrigado senhora, eu acho"
+message_voice_clip_locales = {}
+message_text_locales = {}
+message_hide_on_end = 0
+condition_type = 10
+condition_values = []
+effect_type = 10
+effect_values = []
+
+[sub_resource type="Resource" id="hkg3h"]
+script = ExtResource("2_48vp3")
+item_type = 0
+connected_to_id = -1
+message_speaker_id = "protagonista"
+message_speaker_variant = ""
+message_voice_clip = ""
+message_text = "Esse foi o último pedido do dia..."
+message_voice_clip_locales = {}
+message_text_locales = {}
+message_hide_on_end = 0
+condition_type = 10
+condition_values = []
+effect_type = 10
+effect_values = []
+
+[sub_resource type="Resource" id="uwwod"]
+script = ExtResource("2_48vp3")
+item_type = 0
+connected_to_id = -1
+message_speaker_id = "protagonista"
+message_speaker_variant = ""
+message_voice_clip = ""
+message_text = "Devo ter tempo de limpar o armazém antes de q-"
+message_voice_clip_locales = {}
+message_text_locales = {}
+message_hide_on_end = 0
+condition_type = 10
+condition_values = []
+effect_type = 10
+effect_values = []
+
+[sub_resource type="Resource" id="ig706"]
+script = ExtResource("2_48vp3")
+item_type = 0
+connected_to_id = -1
+message_speaker_id = "protagonista"
+message_speaker_variant = ""
+message_voice_clip = ""
+message_text = "Ah, oi chefe! "
+message_voice_clip_locales = {}
+message_text_locales = {}
+message_hide_on_end = 0
+condition_type = 10
+condition_values = []
+effect_type = 10
+effect_values = []
+
+[sub_resource type="Resource" id="uj1nl"]
+script = ExtResource("2_48vp3")
+item_type = 0
+connected_to_id = -1
+message_speaker_id = "Chefe"
+message_speaker_variant = "Chefe"
+message_voice_clip = ""
+message_text = "Só passei pra dar uma olhadinha em como estão as coisas."
+message_voice_clip_locales = {}
+message_text_locales = {}
+message_hide_on_end = 0
+condition_type = 10
+condition_values = []
+effect_type = 10
+effect_values = []
+
+[sub_resource type="Resource" id="6d3fn"]
+script = ExtResource("2_48vp3")
+item_type = 0
+connected_to_id = -1
+message_speaker_id = "protagonista"
+message_speaker_variant = ""
+message_voice_clip = ""
+message_text = "Está tudo certo! Ia limpar o armazém agora."
+message_voice_clip_locales = {}
+message_text_locales = {}
+message_hide_on_end = 0
+condition_type = 10
+condition_values = []
+effect_type = 10
+effect_values = []
+
+[sub_resource type="Resource" id="86kbs"]
+script = ExtResource("2_48vp3")
+item_type = 0
+connected_to_id = -1
+message_speaker_id = "Chefe"
+message_speaker_variant = "Chefe"
+message_voice_clip = ""
+message_text = "“É bom estar trabalhando direito hein, eu não te criei pra isso"
+message_voice_clip_locales = {}
+message_text_locales = {}
+message_hide_on_end = 0
+condition_type = 10
+condition_values = []
+effect_type = 10
+effect_values = []
+
+[sub_resource type="Resource" id="m2qb1"]
+script = ExtResource("2_48vp3")
+item_type = 0
+connected_to_id = -1
+message_speaker_id = "protagonista"
+message_speaker_variant = ""
+message_voice_clip = ""
+message_text = "Pode deixar! Tudo as ordens."
+message_voice_clip_locales = {}
+message_text_locales = {}
+message_hide_on_end = 0
+condition_type = 10
+condition_values = []
+effect_type = 10
+effect_values = []
+
+[sub_resource type="Resource" id="Resource_lge7f"]
+script = ExtResource("4_f2ijm")
+sequence_id = 3
+position = Vector2(0, 620)
+comment = ""
+items = [SubResource("Resource_ghijk"), SubResource("Resource_t2a6b"), SubResource("hkg3h"), SubResource("uwwod"), SubResource("ig706"), SubResource("uj1nl"), SubResource("6d3fn"), SubResource("86kbs"), SubResource("m2qb1")]
+options = []
+continue_sequence_id = -1
+continue_port_index = 0
+
+[sub_resource type="Resource" id="2s8iw"]
+script = ExtResource("5_vkpn8")
+sheet_id = "dialogue_day2"
+sheet_description = ""
+next_sequence_id = 4
+nodes = [SubResource("ktw87"), SubResource("tvhw6"), SubResource("2vy4m"), SubResource("Resource_lge7f")]
+
+[sub_resource type="Resource" id="dsmgf"]
+script = ExtResource("2_48vp3")
+item_type = 0
+connected_to_id = -1
+message_speaker_id = "protagonista"
+message_speaker_variant = ""
+message_voice_clip = ""
+message_text = "Puxa, último dia do mês e a semana de trabalho já está na metade! O que eu vou fazer com todo esse tempo livre?"
+message_voice_clip_locales = {}
+message_text_locales = {}
+message_hide_on_end = 0
+condition_type = 10
+condition_values = []
+effect_type = 10
+effect_values = []
+
+[sub_resource type="Resource" id="fwb2u"]
+script = ExtResource("2_48vp3")
+item_type = 0
+connected_to_id = -1
+message_speaker_id = "protagonista"
+message_speaker_variant = ""
+message_voice_clip = ""
+message_text = "Mas ainda posso aproveitar! Tem muito pra fazer, conferir os pacotes, organizar o dinheiro do caixa por número de série,  tirar o pó das plantas..."
+message_voice_clip_locales = {}
+message_text_locales = {}
+message_hide_on_end = 0
+condition_type = 10
+condition_values = []
+effect_type = 10
+effect_values = []
+
+[sub_resource type="Resource" id="1yy6g"]
+script = ExtResource("2_48vp3")
+item_type = 0
+connected_to_id = -1
+message_speaker_id = "protagonista"
+message_speaker_variant = ""
+message_voice_clip = ""
+message_text = "Bom dia, em que posso ajudar? Olá, senhora, esqueceu algo?"
+message_voice_clip_locales = {}
+message_text_locales = {}
+message_hide_on_end = 0
+condition_type = 10
+condition_values = []
+effect_type = 10
+effect_values = []
+
+[sub_resource type="Resource" id="ghijk"]
+script = ExtResource("2_48vp3")
+item_type = 0
+connected_to_id = -1
+message_speaker_id = "Senhorinha"
+message_speaker_variant = "Senhorinha"
+message_voice_clip = ""
+message_text = "Bom dia, querido! Eu vim buscar um pacotinho."
+message_voice_clip_locales = {}
+message_text_locales = {}
+message_hide_on_end = 0
+condition_type = 10
+condition_values = []
+effect_type = 10
+effect_values = []
+
+[sub_resource type="Resource" id="iyv7e"]
+script = ExtResource("4_f2ijm")
+sequence_id = 0
+position = Vector2(0, 0)
+comment = ""
+items = [SubResource("dsmgf"), SubResource("fwb2u"), SubResource("1yy6g"), SubResource("ghijk")]
+options = []
+continue_sequence_id = -1
+continue_port_index = 0
+
+[sub_resource type="Resource" id="ogynd"]
+script = ExtResource("5_vkpn8")
+sheet_id = "dialogue_day3"
+sheet_description = ""
+next_sequence_id = 1
+nodes = [SubResource("iyv7e")]
 
 [resource]
 script = ExtResource("1_giduu")
 version = 1.0
 sheets = {
 "dialogue_day1": SubResource("Resource_wspnu"),
-"final_senhorinha": SubResource("2s8iw")
+"dialogue_day2": SubResource("2s8iw"),
+"dialogue_day3": SubResource("ogynd")
 }

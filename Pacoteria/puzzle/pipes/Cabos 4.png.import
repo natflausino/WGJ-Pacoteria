@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dyehj57xqduj6"
-path="res://.godot/imported/Cabos 1.png-66a473d842103f6465cc63cc41cc6fa1.ctex"
+uid="uid://db3uceiaii6kb"
+path="res://.godot/imported/Cabos 4.png-5a49630fc9dcc5c1f33ddb58ed4bb792.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Puzzle/pipes/Cabos 1.png"
-dest_files=["res://.godot/imported/Cabos 1.png-66a473d842103f6465cc63cc41cc6fa1.ctex"]
+source_file="res://puzzle/pipes/Cabos 4.png"
+dest_files=["res://.godot/imported/Cabos 4.png-5a49630fc9dcc5c1f33ddb58ed4bb792.ctex"]
 
 [params]
 

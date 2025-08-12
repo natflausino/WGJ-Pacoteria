@@ -1,7 +1,7 @@
 extends Control
 
 func _on_start_pressed():
-	get_tree().change_scene_to_file("res://dias/scenes/dia01.tscn")
+	get_tree().change_scene_to_file("res://dias/scenes/dia1_1.tscn")
 
 func _on_credits_pressed():
 	get_tree().change_scene_to_file("res://main_menu/scenes/credits.tscn")

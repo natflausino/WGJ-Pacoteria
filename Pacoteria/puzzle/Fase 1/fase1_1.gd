@@ -80,8 +80,12 @@ func _on_any_button_pressed():
 		print("cell7 é false")
 		
 func recarregar_cena():
-	self.visible = false
-	get_tree().reload_current_scene()
+	await get_tree().process_frame
+	var result = get_tree().change_scene_to_file("res://dias/scenes/dia1_2.tscn")
+	if result != OK:
+		print("Falha")
+		
+	#get_tree().reload_current_scene()
 # Não precisamos continuar, já sabemos que uma é false
 
 func determina_Vitoria():

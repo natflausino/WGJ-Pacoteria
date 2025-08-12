@@ -849,7 +849,7 @@ func run_dialog_item(sheet_name: String = "", sequence_id: int = 0, item_index: 
 					)
 					var dialog_message_text = dialog_message_data[0]
 					var dialog_message_anim_pause_percentages = dialog_message_data[1]
-					
+
 					dialog_message_text = dialog_message_text.replace("$time", MadTalkGlobals.gametime["time"])
 					dialog_message_text = dialog_message_text.replace("$date_inv", MadTalkGlobals.gametime["date_inv"])
 					dialog_message_text = dialog_message_text.replace("$date", MadTalkGlobals.gametime["date"])

@@ -1,13 +1,9 @@
 extends Node2D
 
 @onready var character_sprite = $Character/Avatar
-
 @onready var puzzle: Panel = $Puzzle
-@onready var v_caixa: TextureRect = $velinha_caixa
-@onready var v_button: Button = $velinha_caixa/velinha_botao
-@onready var c_caixa: TextureRect = $crianca_caixa
-@onready var c_button: Button = $crianca_caixa/crianca_botao
-var dialogue = 1
+@onready var caixa: TextureRect = $caixa1
+@onready var button: Button = $caixa1/button_caixa1
 
 var character_sprites = {
 	"Crianca": preload("res://dias/assets/characters/Crianca.png"),
@@ -45,29 +41,8 @@ func update_character_sprite(speaker_name: String):
 			character_sprite.texture = character_sprites[speaker_name]
 		else:
 			character_sprite.texture = null
-	
 
-func start_second_dialogue():
-	$MadTalk.start_dialog("dialogue_day1", 2)
-	$MadTalk.connect("speaker_changed", Callable(self, "_on_speaker_changed"))
-
-func start_final_dialogue():
-	$MadTalk.start_dialog("dialogue_day1", 4)
-	$MadTalk.connect("speaker_changed", Callable(self, "_on_speaker_changed"))
-
-func _on_caixa1_pressed():
-	v_caixa.visible = false
+func _on_caixa_pressed():
+	caixa.visible = false
+	button.disabled = true
 	puzzle.visible = true
-
-func _on_caixa2_pressed():
-	c_caixa.visible = false
-	puzzle.visible = true
-
-func verify_puzzle_open():
-		if puzzle.visible == false and v_caixa.visible == false and dialogue == 1:
-			c_caixa.visible = true
-			dialogue = 2
-			start_second_dialogue()
-		elif puzzle.visible == false and v_caixa.visible == false and c_caixa.visable == false and dialogue == 2:
-			start_final_dialogue()
-	
