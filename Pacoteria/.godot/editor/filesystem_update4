@@ -1,0 +1,5 @@
+res://dias/scenes/dia01.tscn
+res://addons/madtalk/runtime/madtalk_data.tres
+res://main_menu/menu.tscn
+res://main_menu/credits.tscn
+res://dias/scripts/dia_01.gd
