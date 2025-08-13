@@ -87,7 +87,7 @@ func recarregar_cena():
 
 func determina_Vitoria():
 	await get_tree().process_frame
-	var result = get_tree().change_scene_to_file("res://dias/scenes/dia3_3.tscn")
+	var result = get_tree().change_scene_to_file("res://dias/scenes/day3/dia3_3.tscn")
 	if result != OK:
 		print("Falha")
 	else:

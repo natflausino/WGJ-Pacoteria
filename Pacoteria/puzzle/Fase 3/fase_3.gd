@@ -82,7 +82,7 @@ func _on_any_button_pressed():
 		
 func recarregar_cena():
 	await get_tree().process_frame
-	var result = get_tree().change_scene_to_file("res://dias/scenes/dia3_2.tscn")
+	var result = get_tree().change_scene_to_file("res://dias/scenes/day3/dia3_2.tscn")
 	if result != OK:
 		print("Falha")
 
