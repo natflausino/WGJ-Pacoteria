@@ -1,7 +1,7 @@
 [gd_scene load_steps=16 format=3 uid="uid://c6v611pmtjjbo"]
 
 [ext_resource type="Script" uid="uid://kqb2ldy3am66" path="res://dias/scripts/day1/dia1_1.gd" id="1_vnutq"]
-[ext_resource type="Texture2D" uid="uid://bt01x8ob3lok2" path="res://dias/assets/caixas/cenario.png" id="2_4wojv"]
+[ext_resource type="Texture2D" uid="uid://bt01x8ob3lok2" path="res://dias/assets/cenario.png" id="2_4wojv"]
 [ext_resource type="Script" uid="uid://c6av3xe4m2ujl" path="res://addons/madtalk/runtime/madtalk_runtime.gd" id="3_tunvg"]
 [ext_resource type="Texture2D" uid="uid://bisxmemjmsq4c" path="res://dias/assets/dialogo_Caixa.png" id="4_yoh48"]
 [ext_resource type="FontFile" uid="uid://qngqj5bn0l41" path="res://fonts/PatrickHand-Regular.ttf" id="5_3frf2"]
