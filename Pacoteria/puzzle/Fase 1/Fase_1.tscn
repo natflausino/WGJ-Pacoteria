@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://c62sj6lw1jrki" path="res://puzzle/pipes/Curva_right.png" id="6_87h2t"]
 [ext_resource type="Texture2D" uid="uid://bp6ujw2xsbkbv" path="res://puzzle/pipes/Curva_left.png" id="7_pljid"]
 
-[node name="Fase1" type="Node2D" node_paths=PackedStringArray("RCell")]
+[node name="Fase2" type="Node2D" node_paths=PackedStringArray("RCell")]
 position = Vector2(312, 184)
 script = ExtResource("1_68rmq")
 RCell = [NodePath("CCell1"), NodePath("CCell2"), NodePath("CCell3"), NodePath("CCell4"), NodePath("CCell5"), NodePath("CCell6"), NodePath("CCell7")]
