@@ -11,7 +11,7 @@
 [node name="Fase1" type="Node2D" node_paths=PackedStringArray("RCell")]
 position = Vector2(312, 184)
 script = ExtResource("1_pljid")
-RCell = [NodePath("CCell1"), NodePath("CCell2"), NodePath("CCell3"), NodePath("CCell4"), NodePath("CCell5"), NodePath("CCell6"), NodePath("CCell7")]
+RCell = [NodePath("CCell1"), NodePath("CCell5"), NodePath("CCell3"), NodePath("CCell4"), NodePath("CCell2"), NodePath("CCell6"), NodePath("CCell7")]
 
 [node name="Cellend" parent="." instance=ExtResource("3_by0m8")]
 position = Vector2(392, 264.356)

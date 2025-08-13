@@ -149,7 +149,7 @@ offset_bottom = 641.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_rqbux")
 
 [node name="Fase1" parent="Puzzle" instance=ExtResource("10_gsv8m")]
-position = Vector2(299, 278)
+position = Vector2(307, 246)
 rotation = 1.5708
 scale = Vector2(0.637, 0.637)
 
