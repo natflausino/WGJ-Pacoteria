@@ -156,6 +156,7 @@ scale = Vector2(0.174992, 0.174992)
 texture = ExtResource("9_21c5n")
 
 [node name="Puzzle" type="Panel" parent="."]
+visible = false
 offset_left = 589.0
 offset_top = 10.0
 offset_right = 1096.0
