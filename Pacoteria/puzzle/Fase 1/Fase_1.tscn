@@ -1,13 +1,13 @@
 [gd_scene load_steps=9 format=3 uid="uid://birl2q1vkvfkt"]
 
 [ext_resource type="Script" uid="uid://c6iu45sclqthm" path="res://puzzle/Fase 1/fase1_1.gd" id="1_68rmq"]
-[ext_resource type="PackedScene" uid="uid://c6l51riis1ic" path="res://puzzle/FCell.tscn" id="2_qsa7l"]
+[ext_resource type="PackedScene" path="res://puzzle/FCell.tscn" id="2_qsa7l"]
 [ext_resource type="PackedScene" uid="uid://driyx20mpq51t" path="res://puzzle/Cell.tscn" id="3_by0m8"]
 [ext_resource type="Texture2D" uid="uid://pmmi5eesfs0c" path="res://puzzle/pipes/Final.png" id="3_ks88m"]
 [ext_resource type="Script" uid="uid://4edrxl03pse4" path="res://puzzle/button.gd" id="4_by0m8"]
-[ext_resource type="Texture2D" uid="uid://dyehj57xqduj6" path="res://puzzle/pipes/Cabos 1.png" id="4_ig7bb"]
-[ext_resource type="Texture2D" uid="uid://db3uceiaii6kb" path="res://puzzle/pipes/Cabos 4.png" id="6_ks88m"]
-[ext_resource type="Texture2D" uid="uid://bp7lwfyku10no" path="res://puzzle/pipes/Cabos 4 left.png" id="7_w5upe"]
+[ext_resource type="Texture2D" uid="uid://dyehj57xqduj6" path="res://puzzle/pipes/Reta.png" id="4_ig7bb"]
+[ext_resource type="Texture2D" path="res://puzzle/pipes/Cabos 4.png" id="6_ks88m"]
+[ext_resource type="Texture2D" path="res://puzzle/pipes/Cabos 4 left.png" id="7_w5upe"]
 
 [node name="Fase1" type="Node2D" node_paths=PackedStringArray("RCell1", "RCell2", "RCell3", "RCell4", "RCell5", "RCell6", "RCell7")]
 position = Vector2(312, 184)

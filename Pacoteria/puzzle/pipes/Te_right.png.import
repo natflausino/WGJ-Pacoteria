@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://el5uch8fgla5"
-path="res://.godot/imported/Cabos 3.png-11650c54e51d5f9653b5f039f6866a4b.ctex"
+path="res://.godot/imported/Te_right.png-657e31be90737d8ef36e138204c5aaea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://puzzle/pipes/Cabos 3.png"
-dest_files=["res://.godot/imported/Cabos 3.png-11650c54e51d5f9653b5f039f6866a4b.ctex"]
+source_file="res://puzzle/pipes/Te_right.png"
+dest_files=["res://.godot/imported/Te_right.png-657e31be90737d8ef36e138204c5aaea.ctex"]
 
 [params]
 
