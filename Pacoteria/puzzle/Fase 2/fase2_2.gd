@@ -1,7 +1,7 @@
 extends Node2D
 
 #Validacão da Celula (VCell)
-var VCell = [false, false, false, false, false, false, false]
+var VCell = [true, false, false, false, false, false, false]
 
 #Rotação da Celula (RCell)
 @export var RCell: Array[Sprite2D]
@@ -33,7 +33,7 @@ func _on_any_button_pressed():
 		VCell[1] = false
 		print("cell3 é false")
 	
-	if RCell[2].rotation_degrees == 0:
+	if RCell[2].rotation_degrees == 90:
 		VCell[2] = true
 		print("cell4 é true")
 		determina_Vitoria()
@@ -57,7 +57,7 @@ func _on_any_button_pressed():
 		VCell[4] = false
 		print("cell7 é false")
 		
-	if RCell[5].rotation_degrees == 0:
+	if RCell[5].rotation_degrees == 90:
 		VCell[5] = true
 		print("cell7 é true")
 		determina_Vitoria()
