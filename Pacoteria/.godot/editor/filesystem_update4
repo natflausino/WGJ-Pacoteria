@@ -1,5 +1,26 @@
-res://dias/scenes/dia01.tscn
+res://main_menu/scripts/change_scenes_menu.gd
+res://dias/scripts/day1/dia1_1.gd
+res://dias/scripts/day1/dia_1_2.gd
+res://dias/scripts/day1/dia_1_3.gd
+res://dias/scenes/day1/dia1_3.tscn
 res://addons/madtalk/runtime/madtalk_data.tres
-res://main_menu/menu.tscn
-res://main_menu/credits.tscn
-res://dias/scripts/dia_01.gd
+res://puzzle/Fase 1/fase1_1.gd
+res://dias/scenes/day2/dia2_1.tscn
+res://main_menu/scenes/menu.tscn
+res://dias/scenes/day3/dia3_1.tscn
+res://dias/scenes/day2/dia2_2.tscn
+res://dias/scenes/day3/dia3_3.tscn
+res://dias/scenes/day2/dia2_3.tscn
+res://dias/scenes/day1/dia1_1.tscn
+res://dias/scripts/day2/dia2_3.gd
+res://dias/scripts/day2/dia2_1.gd
+res://dias/scripts/day2/dia2_2.gd
+res://dias/scripts/day3/dia3_1.gd
+res://puzzle/Fase 2/fase2_1.gd
+res://puzzle/Fase 2/fase2_2.gd
+res://dias/scripts/day3/dia3_2.gd
+res://dias/scripts/day3/dia3_3.gd
+res://dias/scenes/day3/dia3_2.tscn
+res://puzzle/Fase 3/fase3_1.gd
+res://puzzle/Fase 3/fase3_2.gd
+res://dias/scenes/day1/dia1_2.tscn

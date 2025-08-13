@@ -1,0 +1,151 @@
+[gd_scene load_steps=14 format=3 uid="uid://btycolm535o40"]
+
+[ext_resource type="Texture2D" uid="uid://egur61tn3l7i" path="res://final/assets/Cena Final_Pacotaria.png" id="1_d06um"]
+[ext_resource type="FontFile" uid="uid://qngqj5bn0l41" path="res://fonts/PatrickHand-Regular.ttf" id="2_xewyc"]
+[ext_resource type="Texture2D" uid="uid://bl4t1im806cpq" path="res://main_menu/dialogo_Caixa.png" id="3_0ifuk"]
+[ext_resource type="Script" uid="uid://bd7ah62vwwvxf" path="res://main_menu/scripts/change_scenes_menu.gd" id="4_1m5td"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a6nev"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Animation" id="Animation_tt2ji"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Panel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_80bm0"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Panel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nft0b"]
+_data = {
+&"RESET": SubResource("Animation_tt2ji"),
+&"fade_out": SubResource("Animation_80bm0")
+}
+
+[sub_resource type="Animation" id="Animation_wld6o"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(6, 6)]
+}
+
+[sub_resource type="Animation" id="Animation_2vtby"]
+resource_name = "zoom_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(6, 6), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3vfmp"]
+_data = {
+&"RESET": SubResource("Animation_wld6o"),
+&"zoom_out": SubResource("Animation_2vtby")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t5sdr"]
+draw_center = false
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xvw6c"]
+texture = ExtResource("3_0ifuk")
+
+[node name="Final_jogo" type="Node2D"]
+
+[node name="Background" type="TextureRect" parent="."]
+light_mask = 0
+offset_left = 1.0
+offset_top = 3.0
+offset_right = 1156.0
+offset_bottom = 652.0
+texture = ExtResource("1_d06um")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Panel" type="Panel" parent="."]
+visible = false
+offset_left = -22.0
+offset_top = -25.0
+offset_right = 1166.0
+offset_bottom = 677.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_a6nev")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Panel"]
+root_node = NodePath("../../Background")
+libraries = {
+&"": SubResource("AnimationLibrary_nft0b")
+}
+autoplay = "fade_out"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 330)
+zoom = Vector2(6, 6)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera2D"]
+libraries = {
+&"": SubResource("AnimationLibrary_3vfmp")
+}
+autoplay = "zoom_out"
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 378.0
+offset_top = -2.0
+offset_right = 804.0
+offset_bottom = 89.0
+theme_override_colors/font_color = Color(0.27451, 0.0980392, 0.027451, 1)
+theme_override_fonts/font = ExtResource("2_xewyc")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_t5sdr")
+text = "Obrigado por jogar"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 484.0
+offset_top = 577.0
+offset_right = 673.0
+offset_bottom = 640.0
+theme_override_colors/font_hover_color = Color(0.355363, 0.135636, 0.04622, 1)
+theme_override_colors/font_color = Color(0.27451, 0.0980392, 0.027451, 1)
+theme_override_colors/font_pressed_color = Color(0.337255, 0.219608, 0.0745098, 1)
+theme_override_fonts/font = ExtResource("2_xewyc")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_xvw6c")
+text = "Créditos"
+script = ExtResource("4_1m5td")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_credits_pressed"]

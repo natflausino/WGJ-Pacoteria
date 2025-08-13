@@ -1,0 +1,162 @@
+[gd_scene load_steps=10 format=3 uid="uid://ckgg3wnkhx4dj"]
+
+[ext_resource type="FontFile" uid="uid://dy5nkq305hey" path="res://fonts/Koulen-Regular.ttf" id="1_48ou5"]
+[ext_resource type="Script" uid="uid://bbvchok1fb5cy" path="res://main_menu/scenes/settings.gd" id="1_v8cpc"]
+[ext_resource type="Texture2D" uid="uid://bl4t1im806cpq" path="res://main_menu/dialogo_Caixa.png" id="2_rhnqv"]
+[ext_resource type="FontFile" uid="uid://qngqj5bn0l41" path="res://fonts/PatrickHand-Regular.ttf" id="2_te1ks"]
+[ext_resource type="Script" uid="uid://bd7ah62vwwvxf" path="res://main_menu/scripts/change_scenes_menu.gd" id="3_v8cpc"]
+[ext_resource type="Script" uid="uid://bcf4l6d560l7c" path="res://main_menu/scripts/music_controller.gd" id="4_rhnqv"]
+[ext_resource type="AudioStream" uid="uid://4jh56gokbbux" path="res://sfx/Toques UI.wav" id="4_te1ks"]
+[ext_resource type="Script" uid="uid://drrvl4teedv7l" path="res://main_menu/scripts/fullscreen_controller.gd" id="5_5r3j7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5r3j7"]
+texture = ExtResource("2_rhnqv")
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_v8cpc")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = -66.0
+offset_top = -63.0
+offset_right = -26.0
+offset_bottom = -23.0
+scale = Vector2(31.8412, 19.8014)
+theme_override_styles/panel = SubResource("StyleBoxTexture_5r3j7")
+
+[node name="Ajustes" type="Label" parent="."]
+layout_mode = 0
+offset_left = 388.0
+offset_top = -12.0
+offset_right = 749.0
+offset_bottom = 206.0
+scale = Vector2(1, 0.984764)
+theme_override_colors/font_color = Color(0.27451, 0.0980392, 0.027451, 1)
+theme_override_colors/font_shadow_color = Color(0.355363, 0.135636, 0.04622, 1)
+theme_override_colors/font_outline_color = Color(0.894118, 0.772549, 0.6, 1)
+theme_override_constants/line_spacing = 12
+theme_override_fonts/font = ExtResource("1_48ou5")
+theme_override_font_sizes/font_size = 120
+text = "Ajustes"
+horizontal_alignment = 1
+language = "pt_BR"
+
+[node name="return_menu" type="Button" parent="."]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 541.0
+offset_right = 267.0
+offset_bottom = 621.0
+theme_override_colors/font_hover_color = Color(0.355363, 0.135636, 0.04622, 1)
+theme_override_colors/font_color = Color(0.27451, 0.0980392, 0.027451, 1)
+theme_override_colors/font_pressed_color = Color(0.337255, 0.219608, 0.0745098, 1)
+theme_override_fonts/font = ExtResource("2_te1ks")
+theme_override_font_sizes/font_size = 35
+text = "Retornar ao Menu"
+flat = true
+language = "pt_BR"
+script = ExtResource("3_v8cpc")
+
+[node name="sfx_botton" type="AudioStreamPlayer" parent="return_menu"]
+stream = ExtResource("4_te1ks")
+bus = &"SFX"
+playback_type = 1
+
+[node name="Idioma" type="Label" parent="."]
+layout_mode = 0
+offset_left = 415.0
+offset_top = 204.0
+offset_right = 547.0
+offset_bottom = 259.0
+theme_override_colors/font_color = Color(0.27451, 0.0980392, 0.027451, 1)
+theme_override_fonts/font = ExtResource("2_te1ks")
+theme_override_font_sizes/font_size = 40
+text = "Idioma"
+
+[node name="linguagem_button" type="OptionButton" parent="Idioma"]
+layout_mode = 0
+offset_left = 139.0
+offset_top = -5.0
+offset_right = 340.0
+offset_bottom = 58.0
+theme_override_colors/font_color = Color(0.355363, 0.135636, 0.04622, 1)
+theme_override_fonts/font = ExtResource("2_te1ks")
+theme_override_font_sizes/font_size = 40
+flat = true
+selected = 0
+fit_to_longest_item = false
+item_count = 1
+popup/item_0/text = "Português"
+popup/item_0/id = 0
+
+[node name="Music" type="Label" parent="."]
+layout_mode = 0
+offset_left = 421.0
+offset_top = 297.0
+offset_right = 516.0
+offset_bottom = 370.0
+scale = Vector2(0.995262, 1)
+theme_override_colors/font_color = Color(0.27451, 0.0980392, 0.027451, 1)
+theme_override_fonts/font = ExtResource("2_te1ks")
+theme_override_font_sizes/font_size = 40
+text = "Música"
+
+[node name="MusicController" type="HSlider" parent="Music"]
+layout_mode = 0
+offset_left = 140.0
+offset_top = 20.0
+offset_right = 335.0
+offset_bottom = 36.0
+max_value = 1.0
+step = 0.05
+value = 1.0
+script = ExtResource("4_rhnqv")
+audio_bus_name = "Music"
+
+[node name="SFX" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 436.0
+offset_top = 383.0
+offset_right = 493.0
+offset_bottom = 438.0
+theme_override_fonts/font = ExtResource("2_te1ks")
+theme_override_font_sizes/font_size = 40
+text = "SFX"
+
+[node name="SFXController" type="HSlider" parent="SFX"]
+visible = false
+layout_mode = 0
+offset_left = 123.0
+offset_top = 18.0
+offset_right = 318.0
+offset_bottom = 34.0
+max_value = 1.0
+step = 0.05
+value = 1.0
+script = ExtResource("4_rhnqv")
+audio_bus_name = "SFX"
+
+[node name="FullscreenController" type="CheckButton" parent="."]
+layout_mode = 0
+offset_left = 406.0
+offset_top = 367.0
+offset_right = 757.0
+offset_bottom = 430.0
+theme_override_colors/font_color = Color(0.27451, 0.0980392, 0.027451, 1)
+theme_override_fonts/font = ExtResource("2_te1ks")
+theme_override_font_sizes/font_size = 40
+text = "Tela Cheia"
+script = ExtResource("5_5r3j7")
+
+[connection signal="pressed" from="return_menu" to="." method="_on_return_menu_pressed"]
+[connection signal="pressed" from="return_menu" to="return_menu" method="_on_menu_pressed"]
+[connection signal="value_changed" from="Music/MusicController" to="Music/MusicController" method="_on_audio_value_changed"]
+[connection signal="value_changed" from="SFX/SFXController" to="SFX/SFXController" method="_on_audio_value_changed"]
+[connection signal="toggled" from="FullscreenController" to="FullscreenController" method="_on_toggled"]

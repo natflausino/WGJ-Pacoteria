@@ -1,0 +1,114 @@
+[gd_scene load_steps=6 format=3 uid="uid://bviskpb0ajiy6"]
+
+[ext_resource type="Script" uid="uid://citdsneo31e3l" path="res://main_menu/scripts/menu_basics.gd" id="1_1rbkw"]
+[ext_resource type="Texture2D" uid="uid://dyopwl6euodwa" path="res://main_menu/Menu Vazio.png" id="2_1rbkw"]
+[ext_resource type="FontFile" uid="uid://dy5nkq305hey" path="res://fonts/Koulen-Regular.ttf" id="3_i31q7"]
+[ext_resource type="Script" uid="uid://bd7ah62vwwvxf" path="res://main_menu/scripts/change_scenes_menu.gd" id="4_d6osk"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m2eq4"]
+texture = ExtResource("2_1rbkw")
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 8.0
+offset_right = -1.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.998621, 0.997514)
+script = ExtResource("4_d6osk")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = -1.00138
+offset_top = -8.01994
+offset_right = 38.9986
+offset_bottom = 31.98
+scale = Vector2(28.8414, 16.2429)
+theme_override_styles/panel = SubResource("StyleBoxTexture_m2eq4")
+
+[node name="Jogar" type="Button" parent="."]
+layout_mode = 2
+offset_left = 515.711
+offset_top = 361.9
+offset_right = 859.711
+offset_bottom = 514.9
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.886772, 1.27458)
+localize_numeral_system = false
+theme_override_colors/font_hover_color = Color(0.355363, 0.135636, 0.04622, 1)
+theme_override_colors/font_color = Color(0.27451, 0.0980392, 0.027451, 1)
+theme_override_colors/font_pressed_color = Color(0.337255, 0.219608, 0.0745098, 1)
+theme_override_fonts/font = ExtResource("3_i31q7")
+theme_override_font_sizes/font_size = 80
+text = "Jogar"
+flat = true
+
+[node name="Créditos" type="Button" parent="."]
+layout_mode = 2
+offset_left = 302.417
+offset_top = 215.536
+offset_right = 810.417
+offset_bottom = 386.536
+rotation = 0.00636541
+scale = Vector2(0.421604, 0.829088)
+localize_numeral_system = false
+theme_override_colors/font_hover_color = Color(0.355363, 0.135636, 0.04622, 1)
+theme_override_colors/font_color = Color(0.27451, 0.0980392, 0.027451, 1)
+theme_override_colors/font_pressed_color = Color(0.337255, 0.219608, 0.0745098, 1)
+theme_override_fonts/font = ExtResource("3_i31q7")
+theme_override_font_sizes/font_size = 90
+text = "Creditos"
+flat = true
+language = "pt_BR"
+
+[node name="Configurações" type="Button" parent="."]
+layout_mode = 2
+offset_left = 963.0
+offset_top = 397.0
+offset_right = 1158.0
+offset_bottom = 479.0
+scale = Vector2(0.855498, 1.03829)
+localize_numeral_system = false
+theme_override_colors/font_hover_color = Color(0.355363, 0.135636, 0.04622, 1)
+theme_override_colors/font_color = Color(0.27451, 0.0980392, 0.027451, 1)
+theme_override_colors/font_pressed_color = Color(0.337255, 0.219608, 0.0745098, 1)
+theme_override_fonts/font = ExtResource("3_i31q7")
+theme_override_font_sizes/font_size = 40
+text = "Ajustes"
+flat = true
+language = "pt_BR"
+
+[node name="Sair" type="Button" parent="."]
+layout_mode = 0
+offset_left = 80.1105
+offset_top = 541.346
+offset_right = 263.11
+offset_bottom = 641.346
+scale = Vector2(0.639793, 0.97896)
+localize_numeral_system = false
+theme_override_colors/font_hover_color = Color(0.355363, 0.135636, 0.04622, 1)
+theme_override_colors/font_color = Color(0.27451, 0.0980392, 0.027451, 1)
+theme_override_colors/font_pressed_color = Color(0.337255, 0.219608, 0.0745098, 1)
+theme_override_fonts/font = ExtResource("3_i31q7")
+theme_override_font_sizes/font_size = 50
+toggle_mode = true
+text = "Sair"
+flat = true
+language = "pt_BR"
+
+[node name="Audio" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_1rbkw")
+
+[connection signal="pressed" from="Jogar" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Créditos" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="Configurações" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Sair" to="." method="_on_exit_pressed"]

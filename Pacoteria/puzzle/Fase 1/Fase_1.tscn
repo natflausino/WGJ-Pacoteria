@@ -1,0 +1,177 @@
+[gd_scene load_steps=9 format=3 uid="uid://birl2q1vkvfkt"]
+
+[ext_resource type="Script" uid="uid://c6iu45sclqthm" path="res://puzzle/Fase 1/fase1_1.gd" id="1_68rmq"]
+[ext_resource type="PackedScene" uid="uid://c6l51riis1ic" path="res://puzzle/FCell.tscn" id="2_qsa7l"]
+[ext_resource type="PackedScene" uid="uid://driyx20mpq51t" path="res://puzzle/Cell.tscn" id="3_by0m8"]
+[ext_resource type="Texture2D" uid="uid://pmmi5eesfs0c" path="res://puzzle/pipes/Final.png" id="3_ks88m"]
+[ext_resource type="Script" uid="uid://4edrxl03pse4" path="res://puzzle/button.gd" id="4_by0m8"]
+[ext_resource type="Texture2D" uid="uid://dyehj57xqduj6" path="res://puzzle/pipes/Cabos 1.png" id="4_ig7bb"]
+[ext_resource type="Texture2D" uid="uid://db3uceiaii6kb" path="res://puzzle/pipes/Cabos 4.png" id="6_ks88m"]
+[ext_resource type="Texture2D" uid="uid://bp7lwfyku10no" path="res://puzzle/pipes/Cabos 4 left.png" id="7_w5upe"]
+
+[node name="Fase1" type="Node2D" node_paths=PackedStringArray("RCell1", "RCell2", "RCell3", "RCell4", "RCell5", "RCell6", "RCell7")]
+position = Vector2(312, 184)
+script = ExtResource("1_68rmq")
+RCell1 = NodePath("CCell1")
+RCell2 = NodePath("CCell2")
+RCell3 = NodePath("CCell3")
+RCell4 = NodePath("CCell4")
+RCell5 = NodePath("CCell5")
+RCell6 = NodePath("CCell6")
+RCell7 = NodePath("CCell7")
+
+[node name="Cellstart" parent="." instance=ExtResource("2_qsa7l")]
+position = Vector2(-248, -120)
+rotation = 3.14159
+scale = Vector2(1.42222, 1.42222)
+texture = ExtResource("3_ks88m")
+
+[node name="CCell1" parent="." instance=ExtResource("3_by0m8")]
+position = Vector2(-120, -120)
+rotation = 1.5708
+scale = Vector2(1.42222, 1.42222)
+texture = ExtResource("4_ig7bb")
+
+[node name="Button1" type="Button" parent="CCell1" node_paths=PackedStringArray("parent_Cell")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -45.0
+offset_top = -45.0
+offset_right = -45.0
+offset_bottom = -45.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+script = ExtResource("4_by0m8")
+parent_Cell = NodePath("..")
+metadata/_edit_use_anchors_ = true
+
+[node name="CCell2" parent="." instance=ExtResource("3_by0m8")]
+position = Vector2(8.00001, 264)
+rotation = 1.5708
+scale = Vector2(1.42222, 1.42222)
+texture = ExtResource("6_ks88m")
+
+[node name="Button2" type="Button" parent="CCell2" node_paths=PackedStringArray("parent_Cell")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -45.0
+offset_top = -45.0
+offset_right = -45.0
+offset_bottom = -45.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+script = ExtResource("4_by0m8")
+parent_Cell = NodePath("..")
+metadata/_edit_use_anchors_ = true
+
+[node name="CCell3" parent="." instance=ExtResource("3_by0m8")]
+position = Vector2(7.99999, 8)
+scale = Vector2(1.42492, 1.41583)
+texture = ExtResource("4_ig7bb")
+
+[node name="Button" type="Button" parent="CCell3" node_paths=PackedStringArray("parent_Cell")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -44.9148
+offset_top = -45.203
+offset_right = -44.9148
+offset_bottom = -45.203
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+script = ExtResource("4_by0m8")
+parent_Cell = NodePath("..")
+metadata/_edit_use_anchors_ = true
+
+[node name="CCell4" parent="." instance=ExtResource("3_by0m8")]
+position = Vector2(7.99999, 136)
+scale = Vector2(1.41366, 1.41794)
+texture = ExtResource("4_ig7bb")
+
+[node name="Button" type="Button" parent="CCell4" node_paths=PackedStringArray("parent_Cell")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -45.2726
+offset_top = -45.1359
+offset_right = -45.2726
+offset_bottom = -45.1359
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+script = ExtResource("4_by0m8")
+parent_Cell = NodePath("..")
+metadata/_edit_use_anchors_ = true
+
+[node name="CCell5" parent="." instance=ExtResource("3_by0m8")]
+position = Vector2(8.00002, -120)
+rotation = 1.5708
+scale = Vector2(1.42222, 1.42222)
+texture = ExtResource("7_w5upe")
+
+[node name="Button" type="Button" parent="CCell5" node_paths=PackedStringArray("parent_Cell")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -45.0
+offset_top = -45.0
+offset_right = -45.0
+offset_bottom = -45.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+script = ExtResource("4_by0m8")
+parent_Cell = NodePath("..")
+metadata/_edit_use_anchors_ = true
+
+[node name="CCell6" parent="." instance=ExtResource("3_by0m8")]
+position = Vector2(136, 264)
+rotation = 1.5708
+scale = Vector2(1.42222, 1.42222)
+texture = ExtResource("4_ig7bb")
+
+[node name="Button" type="Button" parent="CCell6" node_paths=PackedStringArray("parent_Cell")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -45.0
+offset_top = -45.0
+offset_right = -45.0
+offset_bottom = -45.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+script = ExtResource("4_by0m8")
+parent_Cell = NodePath("..")
+metadata/_edit_use_anchors_ = true
+
+[node name="CCell7" parent="." instance=ExtResource("3_by0m8")]
+position = Vector2(264, 264)
+rotation = 1.5708
+scale = Vector2(1.42222, 1.42222)
+texture = ExtResource("4_ig7bb")
+
+[node name="Button" type="Button" parent="CCell7" node_paths=PackedStringArray("parent_Cell")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -45.0
+offset_top = -45.0
+offset_right = -45.0
+offset_bottom = -45.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+script = ExtResource("4_by0m8")
+parent_Cell = NodePath("..")
+metadata/_edit_use_anchors_ = true
+
+[node name="Cellend" parent="." instance=ExtResource("2_qsa7l")]
+position = Vector2(392, 264)
+scale = Vector2(1.42222, 1.42222)
+texture = ExtResource("3_ks88m")

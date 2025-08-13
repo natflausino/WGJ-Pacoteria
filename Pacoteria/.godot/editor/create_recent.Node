@@ -1,3 +1,14 @@
+Panel
+TextEdit
+Button
+Container
+Control
+CanvasLayer
 TextureRect
-Node2D
-NinePatchRect
+SubViewport
+AnimationPlayer
+Camera2D
+Area2D
+AudioStreamPlayer
+CheckButton
+HSlider
