@@ -81,9 +81,10 @@ func _on_any_button_pressed():
 		print("cell9 é false")
 		
 func recarregar_cena():
-	self.visible = false
-	get_tree().reload_current_scene()
-# Não precisamos continuar, já sabemos que uma é false
+	await get_tree().process_frame
+	var result = get_tree().change_scene_to_file("res://dias/scenes/dia3_2.tscn")
+	if result != OK:
+		print("Falha")
 
 func determina_Vitoria():
 	var verifica_Valor = VCell.all(func(valor):return valor)

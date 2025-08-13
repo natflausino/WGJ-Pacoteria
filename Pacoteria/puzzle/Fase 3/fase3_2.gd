@@ -1,11 +1,10 @@
 extends Node2D
 
 #Validacão da Celula (VCell)
-var VCell = [false, false, false, false, false, false, false]
+var VCell = [true, true, false, false, false, true, false, false]
 
 #Rotação da Celula (RCell)
 @export var RCell: Array[Sprite2D]
-
 
 # Busca por nós do tipo 'Button' em toda a hierarquia de descendentes.
 func _ready():
@@ -24,38 +23,38 @@ func _on_any_button_pressed():
 	else:
 		VCell[0] = false
 		print("cell1 é false")
-		
+	
 	if RCell[1].rotation_degrees == 0:
 		VCell[1] = true
-		print("cell3 é true")
+		print("cell1 é true")
 		determina_Vitoria()
 	else:
 		VCell[1] = false
-		print("cell3 é false")
-	
-	if RCell[2].rotation_degrees == 0:
+		print("cell1 é false")
+		
+	if RCell[2].rotation_degrees == 90:
 		VCell[2] = true
-		print("cell4 é true")
+		print("cell3 é true")
 		determina_Vitoria()
 	else:
 		VCell[2] = false
-		print("cell4 é false")
-		
-	if RCell[3].rotation_degrees == 90:
+		print("cell3 é false")
+	
+	if RCell[3].rotation_degrees == 0:
 		VCell[3] = true
-		print("cell6 é true")
+		print("cell4 é true")
 		determina_Vitoria()
 	else:
 		VCell[3] = false
-		print("cell6 é false")
+		print("cell4 é false")
 		
 	if RCell[4].rotation_degrees == 90:
 		VCell[4] = true
-		print("cell7 é true")
+		print("cell5 é true")
 		determina_Vitoria()
 	else:
 		VCell[4] = false
-		print("cell7 é false")
+		print("cell5 é false")
 		
 	if RCell[5].rotation_degrees == 0:
 		VCell[5] = true
@@ -64,25 +63,32 @@ func _on_any_button_pressed():
 	else:
 		VCell[5] = false
 		print("cell7 é false")
-		
-	if RCell[6].rotation_degrees == 90:
+	
+	if RCell[6].rotation_degrees == 0:
 		VCell[6] = true
-		print("cell7 é true")
+		print("cell8 é true")
 		determina_Vitoria()
 	else:
 		VCell[6] = false
-		print("cell7 é false")
+		print("cell8 é false")
+		
+	if RCell[7].rotation_degrees == 90:
+		VCell[7] = true
+		print("cell9 é true")
+		determina_Vitoria()
+	else:
+		VCell[7] = false
+		print("cell9 é false")
 		
 func recarregar_cena():
-	await get_tree().process_frame
-	var result = get_tree().change_scene_to_file("res://dias/scenes/dia2_3.tscn")
-	if result != OK:
-		print("Falha")
+	self.visible = false
+	get_tree().reload_current_scene()
+# Não precisamos continuar, já sabemos que uma é false
 
 func determina_Vitoria():
-	var verifica_Valor = VCell.all(func(valor):return valor)
-	if verifica_Valor:
-		print("Todas as 7 variáveis no array são true! O jogo reiniciou.")
-		recarregar_cena()
+	await get_tree().process_frame
+	var result = get_tree().change_scene_to_file("res://dias/scenes/dia3_3.tscn")
+	if result != OK:
+		print("Falha")
 	else:
 		print("Pelo menos uma das variáveis no array é false. O evento não pode acontecer.")

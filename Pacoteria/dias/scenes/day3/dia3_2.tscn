@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://bymbv7e224yyn"]
 
 [ext_resource type="Script" uid="uid://bqa6cm3coh2qt" path="res://dias/scripts/day3/dia3_2.gd" id="1_rgwty"]
-[ext_resource type="Texture2D" uid="uid://bt01x8ob3lok2" path="res://dias/assets/cenario.png" id="2_nnl7x"]
+[ext_resource type="Texture2D" uid="uid://bt01x8ob3lok2" path="res://dias/assets/caixas/cenario.png" id="2_nnl7x"]
 [ext_resource type="Script" uid="uid://c6av3xe4m2ujl" path="res://addons/madtalk/runtime/madtalk_runtime.gd" id="3_bt5so"]
 [ext_resource type="Texture2D" uid="uid://bisxmemjmsq4c" path="res://dias/assets/dialogo_Caixa.png" id="4_pqr7w"]
 [ext_resource type="FontFile" uid="uid://qngqj5bn0l41" path="res://fonts/PatrickHand-Regular.ttf" id="5_f7175"]
@@ -9,8 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://dvl4rxk223g35" path="res://dias/assets/characters/Gotique.png" id="7_4bg7i"]
 [ext_resource type="Texture2D" uid="uid://bmqlxyxc2rm6a" path="res://dias/assets/caixas/caixa_Crianca.png" id="8_jttci"]
 [ext_resource type="Texture2D" uid="uid://bhqxtmd4f4okp" path="res://dias/assets/Tela_Puzzle.png" id="9_1t5oj"]
-[ext_resource type="PackedScene" uid="uid://6q0toxxjavq3" path="res://puzzle/Fase 2/Fase_2.tscn" id="10_rgwty"]
-[ext_resource type="Script" uid="uid://b055wk1l2crat" path="res://puzzle/Fase 2/fase3_2.gd" id="11_xccy8"]
+[ext_resource type="PackedScene" uid="uid://dk5fowgte11d2" path="res://puzzle/Fase 3/Fase_3.tscn" id="10_rgwty"]
+[ext_resource type="Script" uid="uid://dpcsena7dmrnf" path="res://puzzle/Fase 3/fase3_2.gd" id="11_xccy8"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1xbhn"]
 
@@ -149,9 +149,7 @@ offset_right = 1096.0
 offset_bottom = 641.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_rqbux")
 
-[node name="Fase2" parent="Puzzle" instance=ExtResource("10_rgwty")]
-position = Vector2(208, 220)
-scale = Vector2(0.634838, 0.634838)
+[node name="Fase3" parent="Puzzle" instance=ExtResource("10_rgwty")]
 script = ExtResource("11_xccy8")
 
 [connection signal="pressed" from="caixa2/caixa2_button" to="." method="_on_caixa_pressed"]
