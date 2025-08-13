@@ -1,7 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://ba8bnuum5cwfv"]
+[gd_scene load_steps=14 format=3 uid="uid://ba8bnuum5cwfv"]
 
 [ext_resource type="Script" uid="uid://c2dk2p3dilss3" path="res://dias/scripts/day1/dia1_2.gd" id="1_ky5gb"]
-[ext_resource type="Texture2D" uid="uid://bt01x8ob3lok2" path="res://dias/assets/cenario.png" id="2_qi41q"]
+[ext_resource type="Texture2D" uid="uid://bt01x8ob3lok2" path="res://dias/assets/caixas/cenario.png" id="2_qi41q"]
 [ext_resource type="Script" uid="uid://c6av3xe4m2ujl" path="res://addons/madtalk/runtime/madtalk_runtime.gd" id="3_ky5gb"]
 [ext_resource type="Texture2D" uid="uid://bisxmemjmsq4c" path="res://dias/assets/dialogo_Caixa.png" id="4_dhagf"]
 [ext_resource type="FontFile" uid="uid://qngqj5bn0l41" path="res://fonts/PatrickHand-Regular.ttf" id="5_gsv8m"]
@@ -10,7 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://bmqlxyxc2rm6a" path="res://dias/assets/caixas/caixa_Crianca.png" id="9_gsv8m"]
 [ext_resource type="PackedScene" uid="uid://birl2q1vkvfkt" path="res://puzzle/Fase 1/Fase_1.tscn" id="10_gsv8m"]
 [ext_resource type="Texture2D" uid="uid://bhqxtmd4f4okp" path="res://dias/assets/Tela_Puzzle.png" id="10_qvoo2"]
-[ext_resource type="Script" uid="uid://daqsx28tehaqw" path="res://puzzle/Fase 1/fase1_2.gd" id="11_qvoo2"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1xbhn"]
 
@@ -150,9 +149,8 @@ offset_bottom = 641.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_rqbux")
 
 [node name="Fase1" parent="Puzzle" instance=ExtResource("10_gsv8m")]
-position = Vector2(191, 363)
-rotation = -1.56984
-scale = Vector2(0.770287, 0.770287)
-script = ExtResource("11_qvoo2")
+position = Vector2(299, 278)
+rotation = 1.5708
+scale = Vector2(0.637, 0.637)
 
 [connection signal="pressed" from="caixa2/caixa2_button" to="." method="_on_caixa_pressed"]

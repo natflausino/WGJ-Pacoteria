@@ -4,13 +4,8 @@ extends Node2D
 var VCell = [false, false, false, false, false, false, false]
 
 #Rotação da Celula (RCell)
-@export var RCell1: Sprite2D
-@export var RCell2: Sprite2D
-@export var RCell3: Sprite2D
-@export var RCell4: Sprite2D
-@export var RCell5: Sprite2D
-@export var RCell6: Sprite2D
-@export var RCell7: Sprite2D
+@export var RCell: Array[Sprite2D]
+
 # Busca por nós do tipo 'Button' em toda a hierarquia de descendentes.
 func _ready():
 	var buttons = find_children("", "Button", true)
@@ -21,7 +16,7 @@ func _ready():
 #Inspecionar a rotação da celula e definir seu valor booleano
 func _on_any_button_pressed():
 		
-	if RCell1.rotation_degrees == 0:
+	if RCell[0].rotation_degrees == 0:
 		VCell[0] = true
 		print("cell1 é true")
 		determina_Vitoria()
@@ -29,7 +24,7 @@ func _on_any_button_pressed():
 		VCell[0] = false
 		print("cell1 é false")
 	
-	if RCell2.rotation_degrees == 0:
+	if RCell[1].rotation_degrees == 0:
 		VCell[1] = true
 		print("vcell2 é true")
 		determina_Vitoria()
@@ -37,7 +32,7 @@ func _on_any_button_pressed():
 		VCell[1] = false
 		print("cell2 é false")
 		
-	if RCell3.rotation_degrees == 90:
+	if RCell[2].rotation_degrees == 90:
 		VCell[2] = true
 		print("cell3 é true")
 		determina_Vitoria()
@@ -45,7 +40,7 @@ func _on_any_button_pressed():
 		VCell[2] = false
 		print("cell3 é false")
 	
-	if RCell4.rotation_degrees == 90:
+	if RCell[3].rotation_degrees == 90:
 		VCell[3] = true
 		print("cell4 é true")
 		determina_Vitoria()
@@ -53,7 +48,7 @@ func _on_any_button_pressed():
 		VCell[3] = false
 		print("cell4 é false")
 	
-	if RCell5.rotation_degrees == 0:
+	if RCell[4].rotation_degrees == 0:
 		VCell[4] = true
 		print("cell5 é true")
 		determina_Vitoria()
@@ -63,7 +58,7 @@ func _on_any_button_pressed():
 		print("cell5 é false")
 		determina_Vitoria()
 		
-	if RCell6.rotation_degrees == 0:
+	if RCell[5].rotation_degrees == 0:
 		VCell[5] = true
 		print("cell6 é true")
 		determina_Vitoria()
@@ -71,7 +66,7 @@ func _on_any_button_pressed():
 		VCell[5] = false
 		print("cell6 é false")
 		
-	if RCell7.rotation_degrees == 0:
+	if RCell[6].rotation_degrees == 0:
 		VCell[6] = true
 		print("cell7 é true")
 		determina_Vitoria()
@@ -84,7 +79,7 @@ func recarregar_cena():
 	var result = get_tree().change_scene_to_file("res://dias/scenes/day1/dia1_3.tscn")
 	if result != OK:
 		print("Falha")
-	#get_tree().reload_current_scene()
+		
 # Não precisamos continuar, já sabemos que uma é false
 
 func determina_Vitoria():
