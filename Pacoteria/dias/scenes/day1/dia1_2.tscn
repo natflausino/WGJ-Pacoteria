@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://ba8bnuum5cwfv"]
 
-[ext_resource type="Script" uid="uid://c2dk2p3dilss3" path="res://dias/scripts/dia_1_2.gd" id="1_ky5gb"]
+[ext_resource type="Script" uid="uid://c2dk2p3dilss3" path="res://dias/scripts/day1/dia1_2.gd" id="1_ky5gb"]
 [ext_resource type="Texture2D" uid="uid://bt01x8ob3lok2" path="res://dias/assets/cenario.png" id="2_qi41q"]
 [ext_resource type="Script" uid="uid://c6av3xe4m2ujl" path="res://addons/madtalk/runtime/madtalk_runtime.gd" id="3_ky5gb"]
 [ext_resource type="Texture2D" uid="uid://bisxmemjmsq4c" path="res://dias/assets/dialogo_Caixa.png" id="4_dhagf"]
@@ -110,9 +110,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -96.0
-offset_top = -241.0
-offset_right = 204.0
-offset_bottom = 159.0
+offset_top = -266.0
+offset_right = 248.0
+offset_bottom = 192.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_2s8iw")
@@ -150,9 +150,9 @@ offset_bottom = 641.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_rqbux")
 
 [node name="Fase1" parent="Puzzle" instance=ExtResource("10_gsv8m")]
-position = Vector2(296, 253)
-rotation = 1.57923
-scale = Vector2(0.74836, 0.74836)
+position = Vector2(191, 363)
+rotation = -1.56984
+scale = Vector2(0.770287, 0.770287)
 script = ExtResource("11_qvoo2")
 
 [connection signal="pressed" from="caixa2/caixa2_button" to="." method="_on_caixa_pressed"]

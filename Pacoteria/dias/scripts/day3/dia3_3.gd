@@ -1,17 +1,17 @@
 extends Node2D
 
 @onready var character_sprite = $Character/Avatar
+@onready var puzzle: Panel = $Puzzle
+@onready var caixa: TextureRect = $caixa1
+@onready var button: Button = $caixa1/button_caixa1
 
 var character_sprites = {
-	"Crianca": preload("res://dias/assets/characters/Crianca.png"),
-	"Gotique": preload("res://dias/assets/characters/Gotique.png"),
-	"Senhorinha": preload("res://dias/assets/characters/Senhorinha.png"),
 	"Maromba": preload("res://dias/assets/characters/Maromba.png"),
 	"Chefe": preload("res://dias/assets/characters/Chefe.png"),
 }
 
 func _ready():
-	$MadTalk.start_dialog("dialogue_day1", 4)
+	$MadTalk.start_dialog("dialogue_day3", 3)
 	$MadTalk.connect("speaker_changed", Callable(self, "_on_speaker_changed"))
 
 func _input(event):
