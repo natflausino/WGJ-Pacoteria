@@ -154,7 +154,7 @@ rotation = 1.5708
 scale = Vector2(1.42222, 1.42222)
 texture = ExtResource("4_ig7bb")
 
-[node name="Button" type="Button" parent="CCell7" node_paths=PackedStringArray("parent_Cell")]
+[node name="Button" type="Button" parent="CCell7" node_paths=PackedStringArray("RCell")]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -165,6 +165,6 @@ offset_bottom = -45.0
 grow_horizontal = 2
 grow_vertical = 2
 flat = true
-script = ExtResource("4_by0m8")
-parent_Cell = NodePath("..")
+script = ExtResource("1_68rmq")
+RCell = [NodePath("../../CCell1"), NodePath("../../CCell2"), NodePath("../../CCell3"), NodePath("../../CCell4"), NodePath("../../CCell5"), NodePath("../../CCell6"), NodePath("..")]
 metadata/_edit_use_anchors_ = true
