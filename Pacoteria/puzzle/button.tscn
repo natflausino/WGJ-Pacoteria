@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://t20dfxo7jvlx"]
+[gd_scene load_steps=0 format=3 uid="uid://t20dfxo7jvlx"]
 
 [node name="Button" type="Button"]
 anchors_preset = -1
