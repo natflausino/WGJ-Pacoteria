@@ -1,8 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://btycolm535o40"]
+[gd_scene load_steps=17 format=3 uid="uid://btycolm535o40"]
 
 [ext_resource type="Texture2D" uid="uid://egur61tn3l7i" path="res://final/assets/Cena Final_Pacotaria.png" id="1_d06um"]
 [ext_resource type="FontFile" uid="uid://qngqj5bn0l41" path="res://fonts/PatrickHand-Regular.ttf" id="2_xewyc"]
 [ext_resource type="Texture2D" uid="uid://bl4t1im806cpq" path="res://main_menu/dialogo_Caixa.png" id="3_0ifuk"]
+[ext_resource type="Texture2D" uid="uid://bisxmemjmsq4c" path="res://dias/assets/dialogo_Caixa.png" id="3_xewyc"]
 [ext_resource type="Script" uid="uid://bd7ah62vwwvxf" path="res://main_menu/scripts/change_scenes_menu.gd" id="4_1m5td"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a6nev"]
@@ -83,6 +84,12 @@ _data = {
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t5sdr"]
 draw_center = false
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0ifuk"]
+texture = ExtResource("3_xewyc")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1m5td"]
+texture = ExtResource("3_xewyc")
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xvw6c"]
 texture = ExtResource("3_0ifuk")
 
@@ -144,6 +151,8 @@ theme_override_colors/font_color = Color(0.27451, 0.0980392, 0.027451, 1)
 theme_override_colors/font_pressed_color = Color(0.337255, 0.219608, 0.0745098, 1)
 theme_override_fonts/font = ExtResource("2_xewyc")
 theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxTexture_0ifuk")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_1m5td")
 theme_override_styles/normal = SubResource("StyleBoxTexture_xvw6c")
 text = "Créditos"
 script = ExtResource("4_1m5td")

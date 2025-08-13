@@ -2,8 +2,8 @@ extends Node2D
 
 @onready var character_sprite = $Character/Avatar
 @onready var puzzle: Panel = $Puzzle
-@onready var caixa: TextureRect = $caixa1
-@onready var button: Button = $caixa1/button_caixa1
+@onready var caixa: TextureRect = $caixa2
+@onready var button: Button = $caixa2/caixa2_button
 
 var character_sprites = {
 	"Senhorinha": preload("res://dias/assets/characters/Senhorinha.png"),

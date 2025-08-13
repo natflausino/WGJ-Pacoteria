@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bb4bp3snwnuji"]
+[gd_scene load_steps=16 format=3 uid="uid://bb4bp3snwnuji"]
 
 [ext_resource type="Script" uid="uid://c3apfsti02206" path="res://dias/scripts/day3/dia3_1.gd" id="1_lou4r"]
 [ext_resource type="Texture2D" uid="uid://bt01x8ob3lok2" path="res://dias/assets/cenario.png" id="2_a72d8"]
@@ -10,7 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://dogtqgux5myju" path="res://dias/assets/caixas/caixa_Velinha.png" id="8_b16wv"]
 [ext_resource type="Texture2D" uid="uid://cvsdrqdu6s3e0" path="res://dias/assets/caixas/caixa_Marombeiro.png" id="9_b7w88"]
 [ext_resource type="Texture2D" uid="uid://bhqxtmd4f4okp" path="res://dias/assets/Tela_Puzzle.png" id="10_ixfad"]
-[ext_resource type="PackedScene" uid="uid://dk5fowgte11d2" path="res://puzzle/Fase 3/Fase_3.tscn" id="11_lou4r"]
+[ext_resource type="PackedScene" uid="uid://6q0toxxjavq3" path="res://puzzle/Fase 2/Fase_2.tscn" id="11_b7w88"]
+[ext_resource type="Script" uid="uid://c8ll0v4kck7we" path="res://puzzle/Fase 2/fase3_1.gd" id="12_1lbm3"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1xbhn"]
 
@@ -110,9 +111,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -96.0
-offset_top = -241.0
-offset_right = 204.0
-offset_bottom = 159.0
+offset_top = -266.0
+offset_right = 248.0
+offset_bottom = 192.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_2s8iw")
@@ -162,8 +163,9 @@ offset_right = 1096.0
 offset_bottom = 641.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_rqbux")
 
-[node name="Fase3" parent="Puzzle" instance=ExtResource("11_lou4r")]
-position = Vector2(207, 280)
-scale = Vector2(0.641182, 0.641182)
+[node name="Fase2" parent="Puzzle" instance=ExtResource("11_b7w88")]
+position = Vector2(207, 261)
+scale = Vector2(0.637135, 0.637135)
+script = ExtResource("12_1lbm3")
 
 [connection signal="pressed" from="caixa1/button_caixa1" to="." method="_on_caixa_pressed"]

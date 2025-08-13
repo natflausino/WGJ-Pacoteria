@@ -9,8 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://dvl4rxk223g35" path="res://dias/assets/characters/Gotique.png" id="7_4bg7i"]
 [ext_resource type="Texture2D" uid="uid://bmqlxyxc2rm6a" path="res://dias/assets/caixas/caixa_Crianca.png" id="8_jttci"]
 [ext_resource type="Texture2D" uid="uid://bhqxtmd4f4okp" path="res://dias/assets/Tela_Puzzle.png" id="9_1t5oj"]
-[ext_resource type="PackedScene" uid="uid://dk5fowgte11d2" path="res://puzzle/Fase 3/Fase_3.tscn" id="10_rgwty"]
-[ext_resource type="Script" uid="uid://bf85xsvgxgnu3" path="res://puzzle/Fase 3/fase3_2.gd" id="11_xccy8"]
+[ext_resource type="PackedScene" uid="uid://6q0toxxjavq3" path="res://puzzle/Fase 2/Fase_2.tscn" id="10_rgwty"]
+[ext_resource type="Script" uid="uid://b055wk1l2crat" path="res://puzzle/Fase 2/fase3_2.gd" id="11_xccy8"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1xbhn"]
 
@@ -40,7 +40,6 @@ ModulateWhenVisitedInThisDialog = Color(0, 0, 1, 1)
 AutoShowMenuOnLastMessage = true
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="Dialog" type="Control" parent="CanvasLayer2"]
 layout_mode = 3
@@ -111,9 +110,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -96.0
-offset_top = -241.0
-offset_right = 204.0
-offset_bottom = 159.0
+offset_top = -266.0
+offset_right = 248.0
+offset_bottom = 192.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_2s8iw")
@@ -143,16 +142,16 @@ offset_bottom = 262.2
 flat = true
 
 [node name="Puzzle" type="Panel" parent="."]
+visible = false
 offset_left = 589.0
 offset_top = 10.0
 offset_right = 1096.0
 offset_bottom = 641.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_rqbux")
 
-[node name="Fase3" parent="Puzzle" instance=ExtResource("10_rgwty")]
-position = Vector2(224, 366)
-rotation = -1.57284
-scale = Vector2(0.757815, 0.757815)
+[node name="Fase2" parent="Puzzle" instance=ExtResource("10_rgwty")]
+position = Vector2(208, 220)
+scale = Vector2(0.634838, 0.634838)
 script = ExtResource("11_xccy8")
 
 [connection signal="pressed" from="caixa2/caixa2_button" to="." method="_on_caixa_pressed"]

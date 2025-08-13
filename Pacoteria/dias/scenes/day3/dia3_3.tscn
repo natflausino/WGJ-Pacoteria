@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://c16w8u08nfojw"]
+[gd_scene load_steps=14 format=3 uid="uid://c16w8u08nfojw"]
 
 [ext_resource type="Script" uid="uid://dmq5qlxetl8ia" path="res://dias/scripts/day3/dia3_3.gd" id="1_gjk48"]
 [ext_resource type="Texture2D" uid="uid://bt01x8ob3lok2" path="res://dias/assets/cenario.png" id="2_pn646"]
@@ -12,6 +12,12 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1xbhn"]
 
 [sub_resource type="Theme" id="Theme_2s8iw"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gjk48"]
+texture = ExtResource("4_jywal")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iede6"]
+texture = ExtResource("4_jywal")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_64kiu"]
 texture = ExtResource("4_jywal")
@@ -107,9 +113,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -96.0
-offset_top = -241.0
-offset_right = 204.0
-offset_bottom = 159.0
+offset_top = -266.0
+offset_right = 248.0
+offset_bottom = 192.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_2s8iw")
@@ -123,9 +129,13 @@ offset_top = 10.0
 offset_right = 1142.0
 offset_bottom = 65.0
 scale = Vector2(1, 0.984293)
+theme_override_colors/font_hover_color = Color(0.355363, 0.135636, 0.04622, 1)
 theme_override_colors/font_color = Color(0.27451, 0.0980392, 0.027451, 1)
+theme_override_colors/font_pressed_color = Color(0.337255, 0.219608, 0.0745098, 1)
 theme_override_fonts/font = ExtResource("5_pirxm")
 theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxTexture_gjk48")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_iede6")
 theme_override_styles/normal = SubResource("StyleBoxTexture_64kiu")
 text = "Tirar foto"
 script = ExtResource("8_oekqh")
