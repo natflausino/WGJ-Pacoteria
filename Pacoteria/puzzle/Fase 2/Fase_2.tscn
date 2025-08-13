@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" uid="uid://d02o38plv6p3i" path="res://puzzle/Fase 2/fase_2.gd" id="1_mo185"]
 [ext_resource type="Texture2D" uid="uid://pmmi5eesfs0c" path="res://puzzle/pipes/Final.png" id="3_rsrqn"]
-[ext_resource type="PackedScene" uid="uid://driyx20mpq51t" path="res://Puzzle/Cell.tscn" id="4_yimnv"]
+[ext_resource type="PackedScene" uid="uid://driyx20mpq51t" path="res://puzzle/Cell.tscn" id="4_yimnv"]
 [ext_resource type="Texture2D" uid="uid://dyehj57xqduj6" path="res://puzzle/pipes/Reta.png" id="5_1rxyh"]
 [ext_resource type="Texture2D" uid="uid://bp6ujw2xsbkbv" path="res://puzzle/pipes/Curva_left.png" id="6_0isgj"]
-[ext_resource type="Script" uid="uid://4edrxl03pse4" path="res://Puzzle/button.gd" id="6_j1lvs"]
+[ext_resource type="Script" uid="uid://4edrxl03pse4" path="res://puzzle/button.gd" id="6_j1lvs"]
 [ext_resource type="Texture2D" uid="uid://c62sj6lw1jrki" path="res://puzzle/pipes/Curva_right.png" id="7_jntwb"]
 
 [node name="Fase2" type="Node2D" node_paths=PackedStringArray("RCell")]
