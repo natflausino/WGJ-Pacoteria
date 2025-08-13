@@ -7,7 +7,7 @@
 [ext_resource type="FontFile" uid="uid://qngqj5bn0l41" path="res://fonts/PatrickHand-Regular.ttf" id="5_bjleo"]
 [ext_resource type="AudioStream" uid="uid://4jh56gokbbux" path="res://sfx/Toques UI.wav" id="6_8m5ks"]
 [ext_resource type="Texture2D" uid="uid://dvl4rxk223g35" path="res://dias/assets/characters/Gotique.png" id="7_uw4jl"]
-[ext_resource type="Script" uid="uid://bd7ah62vwwvxf" path="res://main_menu/scripts/change_scenes_menu.gd" id="8_aqq1a"]
+[ext_resource type="Script" uid="uid://cqgsoh28todow" path="res://dias/scenes/day1/end_day.gd" id="8_p8xu1"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1xbhn"]
 
@@ -138,6 +138,6 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_imxb1")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_1y0qs")
 theme_override_styles/normal = SubResource("StyleBoxTexture_64kiu")
 text = "  Terminar o dia  "
-script = ExtResource("8_aqq1a")
+script = ExtResource("8_p8xu1")
 
-[connection signal="pressed" from="end_day" to="end_day" method="_on_endday1_pressed"]
+[connection signal="pressed" from="end_day" to="end_day" method="_on_pressed"]
