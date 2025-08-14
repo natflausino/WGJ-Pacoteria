@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://c16w8u08nfojw"]
+[gd_scene load_steps=14 format=3 uid="uid://ukgkew3dcmly"]
 
 [ext_resource type="Script" uid="uid://dmq5qlxetl8ia" path="res://dias/scripts/day3/dia3_3.gd" id="1_gjk48"]
 [ext_resource type="Texture2D" uid="uid://bt01x8ob3lok2" path="res://dias/assets/cenario.png" id="2_pn646"]
@@ -7,6 +7,7 @@
 [ext_resource type="FontFile" uid="uid://qngqj5bn0l41" path="res://fonts/PatrickHand-Regular.ttf" id="5_pirxm"]
 [ext_resource type="AudioStream" uid="uid://4jh56gokbbux" path="res://sfx/Toques UI.wav" id="6_1h4ha"]
 [ext_resource type="Texture2D" uid="uid://dvl4rxk223g35" path="res://dias/assets/characters/Gotique.png" id="7_imxlq"]
+[ext_resource type="Script" path="res://dias/scenes/day3/end_day.gd" id="8_gjk48"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1xbhn"]
 
@@ -137,5 +138,6 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_gjk48")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_iede6")
 theme_override_styles/normal = SubResource("StyleBoxTexture_64kiu")
 text = "Tirar foto"
+script = ExtResource("8_gjk48")
 
 [connection signal="pressed" from="end_day" to="end_day" method="_on_pressed"]

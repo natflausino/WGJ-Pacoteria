@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bb4bp3snwnuji"]
+[gd_scene load_steps=15 format=3 uid="uid://dxwe5g1d6ufld"]
 
 [ext_resource type="Script" uid="uid://c3apfsti02206" path="res://dias/scripts/day3/dia3_1.gd" id="1_lou4r"]
 [ext_resource type="Texture2D" uid="uid://bt01x8ob3lok2" path="res://dias/assets/cenario.png" id="2_a72d8"]
