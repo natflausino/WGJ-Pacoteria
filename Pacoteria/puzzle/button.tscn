@@ -1,9 +1,0 @@
-[gd_scene load_steps=0 format=3 uid="uid://t20dfxo7jvlx"]
-
-[node name="Button" type="Button"]
-anchors_preset = -1
-anchor_right = 0.056
-anchor_bottom = 0.099
-offset_right = -0.512001
-offset_bottom = -0.152008
-flat = true

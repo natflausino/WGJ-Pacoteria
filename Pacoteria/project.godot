@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Novo Projeto de Jogo"
+config/name="Pacoteria"
 run/main_scene="uid://bviskpb0ajiy6"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 

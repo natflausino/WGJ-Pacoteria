@@ -1,0 +1,157 @@
+[gd_scene load_steps=16 format=3 uid="uid://d2yay6ol32r3h"]
+
+[ext_resource type="Script" uid="uid://cvmto1boqfb0x" path="res://dias/scripts/day2/dia2_3.gd" id="1_ujk50"]
+[ext_resource type="Texture2D" uid="uid://bt01x8ob3lok2" path="res://dias/assets/cenario.png" id="2_88rmi"]
+[ext_resource type="Script" uid="uid://c6av3xe4m2ujl" path="res://addons/madtalk/runtime/madtalk_runtime.gd" id="3_2nhfk"]
+[ext_resource type="Texture2D" uid="uid://bisxmemjmsq4c" path="res://dias/assets/dialogo_Caixa.png" id="4_ywnwl"]
+[ext_resource type="FontFile" uid="uid://qngqj5bn0l41" path="res://fonts/PatrickHand-Regular.ttf" id="5_y1fm6"]
+[ext_resource type="AudioStream" uid="uid://4jh56gokbbux" path="res://sfx/Toques UI.wav" id="6_18fow"]
+[ext_resource type="Texture2D" uid="uid://dvl4rxk223g35" path="res://dias/assets/characters/Gotique.png" id="7_s2qnn"]
+[ext_resource type="Script" uid="uid://bd7ah62vwwvxf" path="res://main_menu/scripts/change_scenes_menu.gd" id="8_ekp8e"]
+[ext_resource type="FontFile" uid="uid://dy5nkq305hey" path="res://fonts/Koulen-Regular.ttf" id="9_syx5b"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1xbhn"]
+
+[sub_resource type="Theme" id="Theme_2s8iw"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ujk50"]
+texture = ExtResource("4_ywnwl")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_syx5b"]
+texture = ExtResource("4_ywnwl")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_64kiu"]
+texture = ExtResource("4_ywnwl")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bfg2x"]
+
+[node name="dia2_3" type="Node2D"]
+script = ExtResource("1_ujk50")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 1155.0
+offset_bottom = 649.0
+texture = ExtResource("2_88rmi")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="MadTalk" type="Node" parent="."]
+script = ExtResource("3_2nhfk")
+DialogMainControl = NodePath("../CanvasLayer2/Dialog")
+DialogMessageBox = NodePath("../CanvasLayer2/Dialog/MessagePanel")
+DialogMessageLabel = NodePath("../CanvasLayer2/Dialog/MessageRichLabel")
+DialogSpeakerAvatar = NodePath("../Character/Avatar")
+ModulateWhenVisitedPreviously = Color(1, 0, 0, 1)
+ModulateWhenVisitedInThisDialog = Color(0, 0, 1, 1)
+AutoShowMenuOnLastMessage = true
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="Dialog" type="Control" parent="CanvasLayer2"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 623.0
+offset_top = -65.0
+offset_right = 623.0
+offset_bottom = -65.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="DialogoCaixa" type="Sprite2D" parent="CanvasLayer2/Dialog"]
+position = Vector2(-46, 605)
+scale = Vector2(0.67, 0.6)
+texture = ExtResource("4_ywnwl")
+
+[node name="MessageRichLabel" type="RichTextLabel" parent="CanvasLayer2/Dialog"]
+modulate = Color(0.517647, 0.254902, 0.129412, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.484491
+anchor_top = -0.069466
+anchor_right = 0.360995
+anchor_bottom = 0.18825
+offset_left = 50.1333
+offset_top = 578.014
+offset_right = 10.1333
+offset_bottom = 546.014
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("5_y1fm6")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "Lorem ipsum"
+metadata/_edit_use_anchors_ = true
+
+[node name="MessagePanel" type="Panel" parent="CanvasLayer2/Dialog"]
+z_as_relative = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.378472
+anchor_top = 0.953704
+anchor_right = 0.621528
+anchor_bottom = 1.0
+offset_left = -400.0
+offset_top = -152.0
+offset_right = 400.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_1xbhn")
+metadata/_edit_use_anchors_ = true
+
+[node name="SFXClick" type="AudioStreamPlayer" parent="CanvasLayer2/Dialog"]
+stream = ExtResource("6_18fow")
+volume_db = -6.0
+
+[node name="Character" type="Node2D" parent="."]
+position = Vector2(188, 317)
+
+[node name="Avatar" type="TextureRect" parent="Character"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.0
+offset_top = -266.0
+offset_right = 248.0
+offset_bottom = 192.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_2s8iw")
+texture = ExtResource("7_s2qnn")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="end_day" type="Button" parent="."]
+offset_left = 896.0
+offset_top = 10.0
+offset_right = 1142.0
+offset_bottom = 65.0
+scale = Vector2(1, 0.984293)
+theme_override_colors/font_hover_color = Color(0.355363, 0.135636, 0.04622, 1)
+theme_override_colors/font_color = Color(0.27451, 0.0980392, 0.027451, 1)
+theme_override_colors/font_pressed_color = Color(0.337255, 0.219608, 0.0745098, 1)
+theme_override_fonts/font = ExtResource("5_y1fm6")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxTexture_ujk50")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_syx5b")
+theme_override_styles/normal = SubResource("StyleBoxTexture_64kiu")
+text = "  Terminar o dia  "
+script = ExtResource("8_ekp8e")
+
+[node name="Dia 2" type="TextEdit" parent="."]
+offset_left = 6.0
+offset_top = -1.0
+offset_right = 100.0
+offset_bottom = 107.0
+theme_override_colors/font_color = Color(0.27451, 0.0980392, 0.027451, 1)
+theme_override_fonts/font = ExtResource("9_syx5b")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxTexture_bfg2x")
+text = "Dia 2"
+
+[connection signal="pressed" from="end_day" to="end_day" method="_on_endday2_pressed"]
