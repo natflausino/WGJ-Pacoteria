@@ -142,6 +142,7 @@ offset_bottom = 262.2
 flat = true
 
 [node name="Puzzle" type="Panel" parent="."]
+visible = false
 offset_left = 589.0
 offset_top = 10.0
 offset_right = 1096.0
