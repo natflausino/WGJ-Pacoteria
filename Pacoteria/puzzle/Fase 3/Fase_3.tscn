@@ -11,8 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bvjfr3863i4l4" path="res://puzzle/pipes/Te_right.png" id="9_356oj"]
 
 [node name="Fase3" type="Node2D" node_paths=PackedStringArray("RCell")]
-position = Vector2(752, 184)
-rotation = 1.5708
+position = Vector2(694, 407)
 script = ExtResource("1_3pm24")
 RCell = [NodePath("CCell1"), NodePath("CCell2"), NodePath("CCell3"), NodePath("CCell4"), NodePath("CCell5"), NodePath("CCell6"), NodePath("CCell7"), NodePath("CCell8")]
 
@@ -187,3 +186,65 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(392, -208)
 scale = Vector2(1.42222, 1.42222)
 texture = ExtResource("3_85f0h")
+
+[node name="CCell9" parent="." instance=ExtResource("4_m4b7p")]
+position = Vector2(-118, -215)
+rotation = 1.5708
+scale = Vector2(1.42222, 1.42222)
+texture = ExtResource("7_1b6wf")
+
+[node name="Button" type="Button" parent="CCell9" node_paths=PackedStringArray("parent_Cell")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -45.0001
+offset_top = -45.0001
+offset_right = -45.0001
+offset_bottom = -45.0001
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+script = ExtResource("6_sfv5b")
+parent_Cell = NodePath("..")
+metadata/_edit_use_anchors_ = true
+
+[node name="CCell10" parent="." instance=ExtResource("4_m4b7p")]
+position = Vector2(10, -215)
+scale = Vector2(1.42222, 1.42222)
+texture = ExtResource("8_s5u2o")
+
+[node name="Button" type="Button" parent="CCell10" node_paths=PackedStringArray("parent_Cell")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -45.0001
+offset_top = -45.0001
+offset_right = -45.0001
+offset_bottom = -45.0001
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+script = ExtResource("6_sfv5b")
+parent_Cell = NodePath("..")
+metadata/_edit_use_anchors_ = true
+
+[node name="CCell11" parent="." instance=ExtResource("4_m4b7p")]
+position = Vector2(138, 41)
+rotation = 1.5708
+scale = Vector2(1.42222, 1.42222)
+texture = ExtResource("5_wrkp4")
+
+[node name="Button" type="Button" parent="CCell11" node_paths=PackedStringArray("parent_Cell")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -45.0001
+offset_top = -45.0001
+offset_right = -45.0001
+offset_bottom = -45.0001
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+script = ExtResource("6_sfv5b")
+parent_Cell = NodePath("..")
+metadata/_edit_use_anchors_ = true
