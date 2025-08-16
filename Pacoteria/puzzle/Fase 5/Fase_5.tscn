@@ -1,32 +1,32 @@
 [gd_scene load_steps=12 format=3 uid="uid://bxvb04x5f3080"]
 
-[ext_resource type="Script" uid="uid://ucpot1jmfdvk" path="res://puzzle/Fase 4/fase_4.gd" id="1_j6ay3"]
-[ext_resource type="PackedScene" uid="uid://c6l51riis1ic" path="res://puzzle/FCell.tscn" id="2_7lkwq"]
-[ext_resource type="Texture2D" uid="uid://pmmi5eesfs0c" path="res://puzzle/pipes/Final.png" id="3_70dt7"]
-[ext_resource type="PackedScene" uid="uid://driyx20mpq51t" path="res://puzzle/Cell.tscn" id="4_m2pht"]
-[ext_resource type="Texture2D" uid="uid://8x70wg6rtqxo" path="res://puzzle/pipes/Curva_left.png" id="5_hn2yu"]
-[ext_resource type="Script" uid="uid://4edrxl03pse4" path="res://puzzle/button.gd" id="6_jv0h6"]
-[ext_resource type="Texture2D" uid="uid://bvjfr3863i4l4" path="res://puzzle/pipes/Te_right.png" id="7_e16nu"]
-[ext_resource type="Texture2D" uid="uid://bfjnwu55oynqi" path="res://puzzle/pipes/Curva_right.png" id="8_4nh5g"]
-[ext_resource type="Texture2D" uid="uid://dyehj57xqduj6" path="res://puzzle/pipes/Reta.png" id="9_m5ppa"]
-[ext_resource type="Texture2D" uid="uid://hj2xr6ustlbw" path="res://puzzle/pipes/Te_leftpng.png" id="10_87r04"]
-[ext_resource type="AudioStream" uid="uid://gdjbwadf00oh" path="res://music/Mensagem de Acerto.wav" id="11_57al1"]
+[ext_resource type="Script" uid="uid://ca353o55ry7nl" path="res://puzzle/Fase 5/fase_5.gd" id="1_dx6b0"]
+[ext_resource type="PackedScene" uid="uid://c6l51riis1ic" path="res://puzzle/FCell.tscn" id="2_tkald"]
+[ext_resource type="Texture2D" uid="uid://pmmi5eesfs0c" path="res://puzzle/pipes/Final.png" id="3_m3mbt"]
+[ext_resource type="PackedScene" uid="uid://driyx20mpq51t" path="res://puzzle/Cell.tscn" id="4_us5jb"]
+[ext_resource type="Texture2D" uid="uid://8x70wg6rtqxo" path="res://puzzle/pipes/Curva_left.png" id="5_ll8f1"]
+[ext_resource type="Script" uid="uid://4edrxl03pse4" path="res://puzzle/button.gd" id="6_7qq8u"]
+[ext_resource type="Texture2D" uid="uid://bfjnwu55oynqi" path="res://puzzle/pipes/Curva_right.png" id="8_spnja"]
+[ext_resource type="Texture2D" uid="uid://dyehj57xqduj6" path="res://puzzle/pipes/Reta.png" id="9_cl5lv"]
+[ext_resource type="Texture2D" uid="uid://bhp7ouontwra7" path="res://puzzle/pipes/Cruz.png" id="10_dx6b0"]
+[ext_resource type="Texture2D" uid="uid://hj2xr6ustlbw" path="res://puzzle/pipes/Te_leftpng.png" id="10_oye76"]
+[ext_resource type="AudioStream" uid="uid://gdjbwadf00oh" path="res://music/Mensagem de Acerto.wav" id="11_l18tq"]
 
-[node name="Fase4" type="Node2D" node_paths=PackedStringArray("RCell")]
+[node name="Fase5" type="Node2D" node_paths=PackedStringArray("RCell")]
 position = Vector2(694, 407)
-script = ExtResource("1_j6ay3")
-RCell = [NodePath("CCell1"), NodePath("CCell2"), NodePath("CCell3"), NodePath("CCell4"), NodePath("CCell5"), NodePath("CCell6"), NodePath("CCell7"), NodePath("CCell8"), NodePath("CCell9"), NodePath("CCell10"), NodePath("CCell11"), NodePath("CCell12"), NodePath("CCell13"), NodePath("CCell14")]
+script = ExtResource("1_dx6b0")
+RCell = [NodePath("CCell1"), NodePath("CCell2"), NodePath("CCell3"), NodePath("CCell4"), NodePath("CCell5"), NodePath("CCell6"), NodePath("CCell7"), NodePath("CCell9"), NodePath("CCell10"), NodePath("CCell11"), NodePath("CCell12")]
 
-[node name="Cellstart" parent="." instance=ExtResource("2_7lkwq")]
-position = Vector2(-246, -215)
+[node name="Cellstart" parent="." instance=ExtResource("2_tkald")]
+position = Vector2(-246, -87)
 rotation = 3.14159
 scale = Vector2(1.42222, 1.42222)
-texture = ExtResource("3_70dt7")
+texture = ExtResource("3_m3mbt")
 
-[node name="CCell1" parent="." instance=ExtResource("4_m2pht")]
-position = Vector2(-118, -215)
+[node name="CCell1" parent="." instance=ExtResource("4_us5jb")]
+position = Vector2(-118, -87)
 scale = Vector2(1.42222, 1.42222)
-texture = ExtResource("5_hn2yu")
+texture = ExtResource("10_oye76")
 
 [node name="Button1" type="Button" parent="CCell1" node_paths=PackedStringArray("parent_Cell")]
 anchors_preset = 15
@@ -39,15 +39,15 @@ offset_bottom = -45.0001
 grow_horizontal = 2
 grow_vertical = 2
 flat = true
-script = ExtResource("6_jv0h6")
+script = ExtResource("6_7qq8u")
 parent_Cell = NodePath("..")
 metadata/_edit_use_anchors_ = true
 
-[node name="CCell2" parent="." instance=ExtResource("4_m2pht")]
-position = Vector2(-118, -87)
+[node name="CCell2" parent="." instance=ExtResource("4_us5jb")]
+position = Vector2(-118, 41)
 rotation = 1.5708
 scale = Vector2(1.42222, 1.42222)
-texture = ExtResource("7_e16nu")
+texture = ExtResource("8_spnja")
 
 [node name="Button2" type="Button" parent="CCell2" node_paths=PackedStringArray("parent_Cell")]
 anchors_preset = 15
@@ -60,14 +60,14 @@ offset_bottom = -44.9999
 grow_horizontal = 2
 grow_vertical = 2
 flat = true
-script = ExtResource("6_jv0h6")
+script = ExtResource("6_7qq8u")
 parent_Cell = NodePath("..")
 metadata/_edit_use_anchors_ = true
 
-[node name="CCell3" parent="." instance=ExtResource("4_m2pht")]
-position = Vector2(-118, 41)
+[node name="CCell3" parent="." instance=ExtResource("4_us5jb")]
+position = Vector2(-118, -215)
 scale = Vector2(1.42492, 1.41583)
-texture = ExtResource("8_4nh5g")
+texture = ExtResource("8_spnja")
 
 [node name="Button" type="Button" parent="CCell3" node_paths=PackedStringArray("parent_Cell")]
 anchors_preset = 15
@@ -80,14 +80,14 @@ offset_bottom = -45.2032
 grow_horizontal = 2
 grow_vertical = 2
 flat = true
-script = ExtResource("6_jv0h6")
+script = ExtResource("6_7qq8u")
 parent_Cell = NodePath("..")
 metadata/_edit_use_anchors_ = true
 
-[node name="CCell4" parent="." instance=ExtResource("4_m2pht")]
-position = Vector2(10, -87)
+[node name="CCell4" parent="." instance=ExtResource("4_us5jb")]
+position = Vector2(10, -215)
 scale = Vector2(1.41366, 1.41794)
-texture = ExtResource("5_hn2yu")
+texture = ExtResource("9_cl5lv")
 
 [node name="Button" type="Button" parent="CCell4" node_paths=PackedStringArray("parent_Cell")]
 anchors_preset = 15
@@ -100,14 +100,15 @@ offset_bottom = -45.1359
 grow_horizontal = 2
 grow_vertical = 2
 flat = true
-script = ExtResource("6_jv0h6")
+script = ExtResource("6_7qq8u")
 parent_Cell = NodePath("..")
 metadata/_edit_use_anchors_ = true
 
-[node name="CCell5" parent="." instance=ExtResource("4_m2pht")]
-position = Vector2(10, -215)
+[node name="CCell5" parent="." instance=ExtResource("4_us5jb")]
+position = Vector2(10, 41)
+rotation = 1.5708
 scale = Vector2(1.42222, 1.42222)
-texture = ExtResource("8_4nh5g")
+texture = ExtResource("9_cl5lv")
 
 [node name="Button" type="Button" parent="CCell5" node_paths=PackedStringArray("parent_Cell")]
 anchors_preset = 15
@@ -120,15 +121,15 @@ offset_bottom = -45.0001
 grow_horizontal = 2
 grow_vertical = 2
 flat = true
-script = ExtResource("6_jv0h6")
+script = ExtResource("6_7qq8u")
 parent_Cell = NodePath("..")
 metadata/_edit_use_anchors_ = true
 
-[node name="CCell6" parent="." instance=ExtResource("4_m2pht")]
-position = Vector2(10, 41)
+[node name="CCell6" parent="." instance=ExtResource("4_us5jb")]
+position = Vector2(138, -215)
 rotation = 1.5708
 scale = Vector2(1.42222, 1.42222)
-texture = ExtResource("5_hn2yu")
+texture = ExtResource("5_ll8f1")
 
 [node name="Button" type="Button" parent="CCell6" node_paths=PackedStringArray("parent_Cell")]
 anchors_preset = 15
@@ -141,15 +142,15 @@ offset_bottom = -45.0001
 grow_horizontal = 2
 grow_vertical = 2
 flat = true
-script = ExtResource("6_jv0h6")
+script = ExtResource("6_7qq8u")
 parent_Cell = NodePath("..")
 metadata/_edit_use_anchors_ = true
 
-[node name="CCell7" parent="." instance=ExtResource("4_m2pht")]
-position = Vector2(10, 169)
+[node name="CCell7" parent="." instance=ExtResource("4_us5jb")]
+position = Vector2(138, -87)
 rotation = 1.5708
 scale = Vector2(1.42222, 1.42222)
-texture = ExtResource("8_4nh5g")
+texture = ExtResource("9_cl5lv")
 
 [node name="Button" type="Button" parent="CCell7" node_paths=PackedStringArray("parent_Cell")]
 anchors_preset = 15
@@ -162,14 +163,14 @@ offset_bottom = -45.0001
 grow_horizontal = 2
 grow_vertical = 2
 flat = true
-script = ExtResource("6_jv0h6")
+script = ExtResource("6_7qq8u")
 parent_Cell = NodePath("..")
 metadata/_edit_use_anchors_ = true
 
-[node name="CCell8" parent="." instance=ExtResource("4_m2pht")]
-position = Vector2(138, -215)
+[node name="CCell8" parent="." instance=ExtResource("4_us5jb")]
+position = Vector2(138, 41)
 scale = Vector2(1.42222, 1.42222)
-texture = ExtResource("9_m5ppa")
+texture = ExtResource("10_dx6b0")
 
 [node name="Button" type="Button" parent="CCell8" node_paths=PackedStringArray("parent_Cell")]
 anchors_preset = 15
@@ -182,15 +183,15 @@ offset_bottom = -45.0001
 grow_horizontal = 2
 grow_vertical = 2
 flat = true
-script = ExtResource("6_jv0h6")
+script = ExtResource("6_7qq8u")
 parent_Cell = NodePath("..")
 metadata/_edit_use_anchors_ = true
 
-[node name="CCell9" parent="." instance=ExtResource("4_m2pht")]
+[node name="CCell9" parent="." instance=ExtResource("4_us5jb")]
 position = Vector2(138, 169)
 rotation = 1.5708
 scale = Vector2(1.42222, 1.42222)
-texture = ExtResource("5_hn2yu")
+texture = ExtResource("8_spnja")
 
 [node name="Button" type="Button" parent="CCell9" node_paths=PackedStringArray("parent_Cell")]
 anchors_preset = 15
@@ -203,14 +204,14 @@ offset_bottom = -44.9999
 grow_horizontal = 2
 grow_vertical = 2
 flat = true
-script = ExtResource("6_jv0h6")
+script = ExtResource("6_7qq8u")
 parent_Cell = NodePath("..")
 metadata/_edit_use_anchors_ = true
 
-[node name="CCell10" parent="." instance=ExtResource("4_m2pht")]
-position = Vector2(138, 41)
+[node name="CCell10" parent="." instance=ExtResource("4_us5jb")]
+position = Vector2(266, 169)
 scale = Vector2(1.42222, 1.42222)
-texture = ExtResource("8_4nh5g")
+texture = ExtResource("5_ll8f1")
 
 [node name="Button" type="Button" parent="CCell10" node_paths=PackedStringArray("parent_Cell")]
 anchors_preset = 15
@@ -223,15 +224,15 @@ offset_bottom = -45.0001
 grow_horizontal = 2
 grow_vertical = 2
 flat = true
-script = ExtResource("6_jv0h6")
+script = ExtResource("6_7qq8u")
 parent_Cell = NodePath("..")
 metadata/_edit_use_anchors_ = true
 
-[node name="CCell11" parent="." instance=ExtResource("4_m2pht")]
-position = Vector2(266, -215)
+[node name="CCell11" parent="." instance=ExtResource("4_us5jb")]
+position = Vector2(266, 41)
 rotation = 1.5708
 scale = Vector2(1.42222, 1.42222)
-texture = ExtResource("5_hn2yu")
+texture = ExtResource("10_oye76")
 
 [node name="Button" type="Button" parent="CCell11" node_paths=PackedStringArray("parent_Cell")]
 anchors_preset = 15
@@ -244,15 +245,15 @@ offset_bottom = -45.0001
 grow_horizontal = 2
 grow_vertical = 2
 flat = true
-script = ExtResource("6_jv0h6")
+script = ExtResource("6_7qq8u")
 parent_Cell = NodePath("..")
 metadata/_edit_use_anchors_ = true
 
-[node name="CCell12" parent="." instance=ExtResource("4_m2pht")]
+[node name="CCell12" parent="." instance=ExtResource("4_us5jb")]
 position = Vector2(266, -87)
-rotation = 1.5708
 scale = Vector2(1.42222, 1.42222)
-texture = ExtResource("9_m5ppa")
+texture = ExtResource("8_spnja")
+script = ExtResource("1_dx6b0")
 
 [node name="Button" type="Button" parent="CCell12" node_paths=PackedStringArray("parent_Cell")]
 anchors_preset = 15
@@ -265,15 +266,14 @@ offset_bottom = -45.0001
 grow_horizontal = 2
 grow_vertical = 2
 flat = true
-script = ExtResource("6_jv0h6")
+script = ExtResource("6_7qq8u")
 parent_Cell = NodePath("..")
 metadata/_edit_use_anchors_ = true
 
-[node name="CCell13" parent="." instance=ExtResource("4_m2pht")]
-position = Vector2(266, 41)
-rotation = 1.5708
+[node name="CCell13" parent="." instance=ExtResource("4_us5jb")]
+position = Vector2(10, -87)
 scale = Vector2(1.42222, 1.42222)
-texture = ExtResource("10_87r04")
+texture = ExtResource("9_cl5lv")
 
 [node name="Button" type="Button" parent="CCell13" node_paths=PackedStringArray("parent_Cell")]
 anchors_preset = 15
@@ -286,15 +286,15 @@ offset_bottom = -45.0001
 grow_horizontal = 2
 grow_vertical = 2
 flat = true
-script = ExtResource("6_jv0h6")
+script = ExtResource("6_7qq8u")
 parent_Cell = NodePath("..")
 metadata/_edit_use_anchors_ = true
 
-[node name="CCell14" parent="." instance=ExtResource("4_m2pht")]
-position = Vector2(266, 169)
+[node name="CCell14" parent="." instance=ExtResource("4_us5jb")]
+position = Vector2(10, 169)
 rotation = 1.5708
 scale = Vector2(1.42222, 1.42222)
-texture = ExtResource("8_4nh5g")
+texture = ExtResource("8_spnja")
 
 [node name="Button" type="Button" parent="CCell14" node_paths=PackedStringArray("parent_Cell")]
 anchors_preset = 15
@@ -307,56 +307,14 @@ offset_bottom = -45.0001
 grow_horizontal = 2
 grow_vertical = 2
 flat = true
-script = ExtResource("6_jv0h6")
+script = ExtResource("6_7qq8u")
 parent_Cell = NodePath("..")
 metadata/_edit_use_anchors_ = true
 
-[node name="CCell15" parent="." instance=ExtResource("4_m2pht")]
-position = Vector2(-118, 169)
-rotation = 1.5708
+[node name="Cellend" parent="." instance=ExtResource("2_tkald")]
+position = Vector2(394, -87)
 scale = Vector2(1.42222, 1.42222)
-texture = ExtResource("5_hn2yu")
-
-[node name="Button" type="Button" parent="CCell15" node_paths=PackedStringArray("parent_Cell")]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -45.0001
-offset_top = -45.0001
-offset_right = -45.0001
-offset_bottom = -45.0001
-grow_horizontal = 2
-grow_vertical = 2
-flat = true
-script = ExtResource("6_jv0h6")
-parent_Cell = NodePath("..")
-metadata/_edit_use_anchors_ = true
-
-[node name="CCell16" parent="." instance=ExtResource("4_m2pht")]
-position = Vector2(138, -87)
-rotation = 1.5708
-scale = Vector2(1.42222, 1.42222)
-texture = ExtResource("9_m5ppa")
-
-[node name="Button" type="Button" parent="CCell16" node_paths=PackedStringArray("parent_Cell")]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -45.0001
-offset_top = -45.0001
-offset_right = -45.0001
-offset_bottom = -45.0001
-grow_horizontal = 2
-grow_vertical = 2
-flat = true
-script = ExtResource("6_jv0h6")
-parent_Cell = NodePath("..")
-metadata/_edit_use_anchors_ = true
-
-[node name="Cellend" parent="." instance=ExtResource("2_7lkwq")]
-position = Vector2(394, 169)
-scale = Vector2(1.42222, 1.42222)
-texture = ExtResource("3_70dt7")
+texture = ExtResource("3_m3mbt")
 
 [node name="Victorysound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("11_57al1")
+stream = ExtResource("11_l18tq")
