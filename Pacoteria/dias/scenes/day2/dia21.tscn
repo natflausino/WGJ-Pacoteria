@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dogtqgux5myju" path="res://dias/assets/caixas/caixa_Velinha.png" id="8_mb5qw"]
 [ext_resource type="Texture2D" uid="uid://bx7efjaeai4ng" path="res://dias/assets/caixas/caixa_Gotique.png" id="8_x00s3"]
 [ext_resource type="Texture2D" uid="uid://bhqxtmd4f4okp" path="res://dias/assets/Tela_Puzzle.png" id="10_oohmv"]
-[ext_resource type="PackedScene" uid="uid://6q0toxxjavq3" path="res://puzzle/Fase 2/Fase_2.tscn" id="11_x00s3"]
+[ext_resource type="PackedScene" uid="uid://btem7kywjpovg" path="res://puzzle/Fase 3/Fase_3.tscn" id="11_jkaur"]
 [ext_resource type="FontFile" uid="uid://dy5nkq305hey" path="res://fonts/Koulen-Regular.ttf" id="12_4dq25"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1xbhn"]
@@ -165,9 +165,10 @@ offset_right = 1096.0
 offset_bottom = 641.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_rqbux")
 
-[node name="Fase2" parent="Puzzle" instance=ExtResource("11_x00s3")]
-position = Vector2(206, 234)
-scale = Vector2(0.641513, 0.641513)
+[node name="Fase3" parent="Puzzle" node_paths=PackedStringArray("RCell") instance=ExtResource("11_jkaur")]
+position = Vector2(206, 289)
+scale = Vector2(0.63, 0.63)
+RCell = []
 
 [node name="Dia 2" type="TextEdit" parent="."]
 offset_left = 6.0
