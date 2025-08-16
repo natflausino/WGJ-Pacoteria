@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dvl4rxk223g35" path="res://dias/assets/characters/Gotique.png" id="7_4bg7i"]
 [ext_resource type="Texture2D" uid="uid://cvsdrqdu6s3e0" path="res://dias/assets/caixas/caixa_Marombeiro.png" id="8_xccy8"]
 [ext_resource type="Texture2D" uid="uid://bhqxtmd4f4okp" path="res://dias/assets/Tela_Puzzle.png" id="9_1t5oj"]
-[ext_resource type="PackedScene" uid="uid://bxvb04x5f3080" path="res://puzzle/Fase 5/Fase_5.tscn" id="10_1gckn"]
+[ext_resource type="PackedScene" uid="uid://geubtc7f2i5y" path="res://puzzle/Fase 6/Fase_6.tscn" id="10_1gckn"]
 [ext_resource type="FontFile" uid="uid://dy5nkq305hey" path="res://fonts/Koulen-Regular.ttf" id="12_xccy8"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1xbhn"]
@@ -151,7 +151,7 @@ offset_right = 1096.0
 offset_bottom = 641.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_rqbux")
 
-[node name="Fase5" parent="Puzzle" instance=ExtResource("10_1gckn")]
+[node name="Fase6" parent="Puzzle" instance=ExtResource("10_1gckn")]
 
 [node name="Dia 3" type="TextEdit" parent="."]
 offset_left = 6.0
