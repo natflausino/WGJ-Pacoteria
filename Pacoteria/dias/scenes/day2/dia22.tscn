@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://b6u5dfjf445rk"]
+[gd_scene load_steps=16 format=3 uid="uid://b6u5dfjf445rk"]
 
 [ext_resource type="Script" uid="uid://pwnfu7ll1frw" path="res://dias/scripts/day2/dia2_2.gd" id="1_psqhl"]
 [ext_resource type="Texture2D" uid="uid://bt01x8ob3lok2" path="res://dias/assets/cenario.png" id="2_it8h2"]
@@ -9,8 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dvl4rxk223g35" path="res://dias/assets/characters/Gotique.png" id="7_0ug0v"]
 [ext_resource type="Texture2D" uid="uid://dogtqgux5myju" path="res://dias/assets/caixas/caixa_Velinha.png" id="8_psqhl"]
 [ext_resource type="Texture2D" uid="uid://bhqxtmd4f4okp" path="res://dias/assets/Tela_Puzzle.png" id="9_da201"]
-[ext_resource type="PackedScene" uid="uid://6q0toxxjavq3" path="res://puzzle/Fase 2/Fase_2.tscn" id="10_psqhl"]
-[ext_resource type="Script" uid="uid://cy7cl3dn0v2ek" path="res://puzzle/Fase 2/fase2_2.gd" id="11_esbfd"]
+[ext_resource type="PackedScene" uid="uid://bgt8gatg1wyry" path="res://puzzle/Fase 4/Fase_4.tscn" id="10_k4tgu"]
 [ext_resource type="FontFile" uid="uid://dy5nkq305hey" path="res://fonts/Koulen-Regular.ttf" id="12_esbfd"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1xbhn"]
@@ -152,10 +151,7 @@ offset_right = 1096.0
 offset_bottom = 641.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_rqbux")
 
-[node name="Fase2" parent="Puzzle" instance=ExtResource("10_psqhl")]
-position = Vector2(209, 248)
-scale = Vector2(0.628577, 0.628577)
-script = ExtResource("11_esbfd")
+[node name="Fase4" parent="Puzzle" instance=ExtResource("10_k4tgu")]
 
 [node name="Dia 2" type="TextEdit" parent="."]
 offset_left = 6.0
