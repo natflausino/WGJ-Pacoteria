@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://btem7kywjpovg"]
+[gd_scene load_steps=11 format=3 uid="uid://btem7kywjpovg"]
 
 [ext_resource type="Script" uid="uid://47tos8yd677e" path="res://puzzle/Fase 3/fase_3.gd" id="1_3pm24"]
 [ext_resource type="PackedScene" uid="uid://c6l51riis1ic" path="res://puzzle/FCell.tscn" id="2_pexs5"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bfjnwu55oynqi" path="res://puzzle/pipes/Curva_right.png" id="7_1b6wf"]
 [ext_resource type="Texture2D" uid="uid://8x70wg6rtqxo" path="res://puzzle/pipes/Curva_left.png" id="8_s5u2o"]
 [ext_resource type="Texture2D" uid="uid://bvjfr3863i4l4" path="res://puzzle/pipes/Te_right.png" id="9_356oj"]
+[ext_resource type="AudioStream" uid="uid://gdjbwadf00oh" path="res://music/Mensagem de Acerto.wav" id="10_pexs5"]
 
 [node name="Fase3" type="Node2D" node_paths=PackedStringArray("RCell")]
 position = Vector2(694, 407)
@@ -248,3 +249,6 @@ flat = true
 script = ExtResource("6_sfv5b")
 parent_Cell = NodePath("..")
 metadata/_edit_use_anchors_ = true
+
+[node name="Victorysound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_pexs5")
