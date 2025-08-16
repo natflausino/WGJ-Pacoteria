@@ -7,7 +7,6 @@ func _ready():
 	pressed.connect(mudar_rotacao)
 
 func mudar_rotacao():
-	print("Botão pressionado!")
 	# Verifica a rotação em graus usando a propriedade correta.
 	if parent_Cell.rotation_degrees == 0:
 		# Se for 0, muda a rotação para 90 graus usando a propriedade correta.

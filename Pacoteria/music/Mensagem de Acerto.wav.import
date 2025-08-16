@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://gdjbwadf00oh"
+path="res://.godot/imported/Mensagem de Acerto.wav-3b4d1e9a3bee8e4f1636d829f0f8930e.sample"
+
+[deps]
+
+source_file="res://music/Mensagem de Acerto.wav"
+dest_files=["res://.godot/imported/Mensagem de Acerto.wav-3b4d1e9a3bee8e4f1636d829f0f8930e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
