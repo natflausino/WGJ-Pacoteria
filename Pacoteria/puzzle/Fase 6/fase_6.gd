@@ -4,7 +4,7 @@ extends Node2D
 var VCell = []
 
 #Rotação esperada (ERotation)
-var ERotation = [0, 0, 90, 0, 0, 0, 90, 0, 90, 0, 90]
+var ERotation = [90, 90, 0, 0, 90, 0, 90, 0, 90, 0, 90, 90]
 
 #Rotação da Celula (RCell)
 @export var RCell: Array [Sprite2D]
@@ -46,6 +46,6 @@ func recarregar_cena():
 	await get_tree().create_timer(1.0).timeout
 	
 	await get_tree().process_frame
-	var result = get_tree().change_scene_to_file("res://dias/scenes/day2/dia23.tscn")
+	var result = get_tree().change_scene_to_file("res://dias/scenes/day3/dia33.tscn")
 	if result != OK:
 		print("Falha")

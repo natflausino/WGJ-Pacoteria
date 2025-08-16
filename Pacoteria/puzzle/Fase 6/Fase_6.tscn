@@ -16,7 +16,7 @@
 [node name="Fase6" type="Node2D" node_paths=PackedStringArray("RCell")]
 position = Vector2(694, 407)
 script = ExtResource("1_whtnk")
-RCell = [NodePath("CCell1"), NodePath("CCell2"), NodePath("CCell3"), NodePath("CCell4"), NodePath("CCell5"), NodePath("CCell6"), NodePath("CCell7"), NodePath("CCell8"), NodePath("CCell9"), NodePath("CCell11"), NodePath("CCell12"), NodePath("CCell13"), NodePath("CCell14")]
+RCell = [NodePath("CCell2"), NodePath("CCell3"), NodePath("CCell4"), NodePath("CCell5"), NodePath("CCell6"), NodePath("CCell7"), NodePath("CCell8"), NodePath("CCell9"), NodePath("CCell11"), NodePath("CCell12"), NodePath("CCell13"), NodePath("CCell14")]
 
 [node name="Cellstart" parent="." instance=ExtResource("2_crsix")]
 position = Vector2(-246, -87)
@@ -28,7 +28,7 @@ texture = ExtResource("3_lij0n")
 position = Vector2(-118, -87)
 rotation = 1.5708
 scale = Vector2(1.42222, 1.42222)
-texture = ExtResource("5_gwy86")
+texture = ExtResource("10_8hjbb")
 
 [node name="Button1" type="Button" parent="CCell1" node_paths=PackedStringArray("parent_Cell")]
 anchors_preset = 15
