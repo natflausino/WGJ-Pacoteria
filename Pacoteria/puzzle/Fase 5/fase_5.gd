@@ -3,9 +3,8 @@ extends Node2D
 #Validacão da Celula (VCell)
 var VCell = []
 
-
 #Rotação esperada (ERotation)
-var ERotation = [0, 0, 0, 90, 90, 0, 0, 0, 90, 90, 0, 90, 0, 0]
+var ERotation = [0, 0, 90, 0, 0, 0, 90, 0, 90, 0, 90]
 
 #Rotação da Celula (RCell)
 @export var RCell: Array [Sprite2D]
