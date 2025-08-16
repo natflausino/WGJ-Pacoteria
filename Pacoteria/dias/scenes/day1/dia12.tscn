@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://ba8bnuum5cwfv"]
+[gd_scene load_steps=16 format=3 uid="uid://ba8bnuum5cwfv"]
 
 [ext_resource type="Script" uid="uid://c2dk2p3dilss3" path="res://dias/scripts/day1/dia1_2.gd" id="1_ky5gb"]
 [ext_resource type="Texture2D" uid="uid://bt01x8ob3lok2" path="res://dias/assets/cenario.png" id="2_qi41q"]
@@ -8,9 +8,8 @@
 [ext_resource type="AudioStream" uid="uid://4jh56gokbbux" path="res://sfx/Toques UI.wav" id="6_qvoo2"]
 [ext_resource type="Texture2D" uid="uid://dvl4rxk223g35" path="res://dias/assets/characters/Gotique.png" id="7_5vglt"]
 [ext_resource type="Texture2D" uid="uid://bmqlxyxc2rm6a" path="res://dias/assets/caixas/caixa_Crianca.png" id="9_gsv8m"]
-[ext_resource type="PackedScene" uid="uid://birl2q1vkvfkt" path="res://puzzle/Fase 1/Fase_1.tscn" id="10_gsv8m"]
+[ext_resource type="PackedScene" uid="uid://6q0toxxjavq3" path="res://puzzle/Fase 2/Fase_2.tscn" id="10_2a1sl"]
 [ext_resource type="Texture2D" uid="uid://bhqxtmd4f4okp" path="res://dias/assets/Tela_Puzzle.png" id="10_qvoo2"]
-[ext_resource type="Script" uid="uid://daqsx28tehaqw" path="res://puzzle/Fase 1/fase1_2.gd" id="11_qvoo2"]
 [ext_resource type="FontFile" uid="uid://dy5nkq305hey" path="res://fonts/Koulen-Regular.ttf" id="12_chydq"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1xbhn"]
@@ -152,11 +151,7 @@ offset_right = 1096.0
 offset_bottom = 641.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_rqbux")
 
-[node name="Fase1" parent="Puzzle" instance=ExtResource("10_gsv8m")]
-position = Vector2(191, 363)
-rotation = -1.56984
-scale = Vector2(0.770287, 0.770287)
-script = ExtResource("11_qvoo2")
+[node name="Fase2" parent="Puzzle" instance=ExtResource("10_2a1sl")]
 
 [node name="Dia 1" type="TextEdit" parent="."]
 offset_left = 6.0
