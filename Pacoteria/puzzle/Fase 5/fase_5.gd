@@ -46,6 +46,6 @@ func recarregar_cena():
 	await get_tree().create_timer(1.0).timeout
 	
 	await get_tree().process_frame
-	var result = get_tree().change_scene_to_file("res://dias/scenes/day2/dia23.tscn")
+	var result = get_tree().change_scene_to_file("res://dias/scenes/day3/dia32.tscn")
 	if result != OK:
 		print("Falha")
