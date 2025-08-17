@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://6q0toxxjavq3"]
+[gd_scene load_steps=9 format=3 uid="uid://6q0toxxjavq3"]
 
 [ext_resource type="Script" uid="uid://d02o38plv6p3i" path="res://puzzle/Fase 2/fase2_1.gd" id="1_mo185"]
 [ext_resource type="PackedScene" uid="uid://c6l51riis1ic" path="res://puzzle/FCell.tscn" id="2_vbrtb"]
@@ -8,8 +8,6 @@
 [ext_resource type="Script" uid="uid://4edrxl03pse4" path="res://puzzle/button.gd" id="6_j1lvs"]
 [ext_resource type="Texture2D" uid="uid://bfjnwu55oynqi" path="res://puzzle/pipes/Curva_right.png" id="7_0isgj"]
 [ext_resource type="Texture2D" uid="uid://8x70wg6rtqxo" path="res://puzzle/pipes/Curva_left.png" id="8_jntwb"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5r38t"]
 
 [node name="Fase2" type="Node2D" node_paths=PackedStringArray("RCell")]
 position = Vector2(312, 184)
@@ -66,7 +64,7 @@ metadata/_edit_use_anchors_ = true
 [node name="CCell3" parent="." instance=ExtResource("4_yimnv")]
 position = Vector2(136, 264)
 scale = Vector2(1.42492, 1.41583)
-texture = SubResource("CompressedTexture2D_5r38t")
+texture = ExtResource("8_jntwb")
 
 [node name="Button" type="Button" parent="CCell3" node_paths=PackedStringArray("parent_Cell")]
 anchors_preset = 15
@@ -105,7 +103,6 @@ metadata/_edit_use_anchors_ = true
 
 [node name="CCell5" parent="." instance=ExtResource("4_yimnv")]
 position = Vector2(136, 8)
-rotation = 1.5708
 scale = Vector2(1.42222, 1.42222)
 texture = ExtResource("7_0isgj")
 

@@ -1,7 +1,7 @@
-[gd_scene load_steps=16 format=3 uid="uid://b6u5dfjf445rk"]
+[gd_scene load_steps=18 format=3 uid="uid://b6u5dfjf445rk"]
 
 [ext_resource type="Script" uid="uid://pwnfu7ll1frw" path="res://dias/scripts/day2/dia2_2.gd" id="1_psqhl"]
-[ext_resource type="Texture2D" uid="uid://bt01x8ob3lok2" path="res://dias/assets/cenario.png" id="2_it8h2"]
+[ext_resource type="Texture2D" uid="uid://bt01x8ob3lok2" path="res://dias/assets/caixas/cenario.png" id="2_it8h2"]
 [ext_resource type="Script" uid="uid://c6av3xe4m2ujl" path="res://addons/madtalk/runtime/madtalk_runtime.gd" id="3_48shs"]
 [ext_resource type="Texture2D" uid="uid://bisxmemjmsq4c" path="res://dias/assets/dialogo_Caixa.png" id="4_p7s1g"]
 [ext_resource type="FontFile" uid="uid://qngqj5bn0l41" path="res://fonts/PatrickHand-Regular.ttf" id="5_2qgda"]
@@ -19,7 +19,11 @@
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rqbux"]
 texture = ExtResource("9_da201")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hufow"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k4tgu"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6s6ki"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g476e"]
 
 [node name="dia2_2" type="Node2D"]
 script = ExtResource("1_psqhl")
@@ -156,14 +160,26 @@ position = Vector2(206, 289)
 scale = Vector2(0.63, 0.63)
 
 [node name="Dia 2" type="TextEdit" parent="."]
-offset_left = 6.0
 offset_top = -1.0
-offset_right = 100.0
+offset_right = 94.0
 offset_bottom = 107.0
+theme_override_colors/font_readonly_color = Color(0.27451, 0.0980392, 0.027451, 1)
 theme_override_colors/font_color = Color(0.27451, 0.0980392, 0.027451, 1)
 theme_override_fonts/font = ExtResource("12_esbfd")
 theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxTexture_hufow")
+theme_override_styles/normal = SubResource("StyleBoxTexture_k4tgu")
+theme_override_styles/focus = SubResource("StyleBoxTexture_6s6ki")
+theme_override_styles/read_only = SubResource("StyleBoxTexture_g476e")
 text = "Dia 2"
+editable = false
+context_menu_enabled = false
+emoji_menu_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+virtual_keyboard_enabled = false
+middle_mouse_paste_enabled = false
+empty_selection_clipboard_enabled = false
 
 [connection signal="pressed" from="caixa2/caixa2_button" to="." method="_on_caixa_pressed"]

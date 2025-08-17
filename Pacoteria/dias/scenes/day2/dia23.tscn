@@ -1,7 +1,7 @@
-[gd_scene load_steps=16 format=3 uid="uid://d2yay6ol32r3h"]
+[gd_scene load_steps=18 format=3 uid="uid://d2yay6ol32r3h"]
 
 [ext_resource type="Script" uid="uid://cvmto1boqfb0x" path="res://dias/scripts/day2/dia2_3.gd" id="1_ujk50"]
-[ext_resource type="Texture2D" uid="uid://bt01x8ob3lok2" path="res://dias/assets/cenario.png" id="2_88rmi"]
+[ext_resource type="Texture2D" uid="uid://bt01x8ob3lok2" path="res://dias/assets/caixas/cenario.png" id="2_88rmi"]
 [ext_resource type="Script" uid="uid://c6av3xe4m2ujl" path="res://addons/madtalk/runtime/madtalk_runtime.gd" id="3_2nhfk"]
 [ext_resource type="Texture2D" uid="uid://bisxmemjmsq4c" path="res://dias/assets/dialogo_Caixa.png" id="4_ywnwl"]
 [ext_resource type="FontFile" uid="uid://qngqj5bn0l41" path="res://fonts/PatrickHand-Regular.ttf" id="5_y1fm6"]
@@ -23,7 +23,11 @@ texture = ExtResource("4_ywnwl")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_64kiu"]
 texture = ExtResource("4_ywnwl")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bfg2x"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5msmr"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3aq6r"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1rabb"]
 
 [node name="dia2_3" type="Node2D"]
 script = ExtResource("1_ujk50")
@@ -144,14 +148,26 @@ text = "  Terminar o dia  "
 script = ExtResource("8_ekp8e")
 
 [node name="Dia 2" type="TextEdit" parent="."]
-offset_left = 6.0
 offset_top = -1.0
-offset_right = 100.0
+offset_right = 94.0
 offset_bottom = 107.0
+theme_override_colors/font_readonly_color = Color(0.27451, 0.0980392, 0.027451, 1)
 theme_override_colors/font_color = Color(0.27451, 0.0980392, 0.027451, 1)
 theme_override_fonts/font = ExtResource("9_syx5b")
 theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxTexture_bfg2x")
+theme_override_styles/normal = SubResource("StyleBoxTexture_5msmr")
+theme_override_styles/focus = SubResource("StyleBoxTexture_3aq6r")
+theme_override_styles/read_only = SubResource("StyleBoxTexture_1rabb")
 text = "Dia 2"
+editable = false
+context_menu_enabled = false
+emoji_menu_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+virtual_keyboard_enabled = false
+middle_mouse_paste_enabled = false
+empty_selection_clipboard_enabled = false
 
 [connection signal="pressed" from="end_day" to="end_day" method="_on_endday2_pressed"]

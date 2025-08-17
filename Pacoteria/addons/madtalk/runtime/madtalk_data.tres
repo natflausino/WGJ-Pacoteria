@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="DialogData" load_steps=95 format=3 uid="uid://dxkjjrap15vxu"]
+[gd_resource type="Resource" script_class="DialogData" load_steps=96 format=3 uid="uid://dxkjjrap15vxu"]
 
 [ext_resource type="Script" uid="uid://bw2q2eucjkylk" path="res://addons/madtalk/components/resources/DialogData.gd" id="1_giduu"]
 [ext_resource type="Script" uid="uid://c2bv5lwcvdmrb" path="res://addons/madtalk/components/resources/DialogNodeItemData.gd" id="2_48vp3"]
@@ -120,7 +120,7 @@ connected_to_id = -1
 message_speaker_id = "protagonista"
 message_speaker_variant = "Senhorinha"
 message_voice_clip = ""
-message_text = "Mas é claro senhora, so peço que aguarde um instante!"
+message_text = "Mas é claro senhora, só peço que aguarde um instante!"
 message_voice_clip_locales = {}
 message_text_locales = {}
 message_hide_on_end = 0
@@ -654,7 +654,7 @@ connected_to_id = -1
 message_speaker_id = "Gotique"
 message_speaker_variant = ""
 message_voice_clip = ""
-message_text = "Chefe: Humph... Obrigade"
+message_text = "Cliente: Humph... Obrigade"
 message_voice_clip_locales = {}
 message_text_locales = {}
 message_hide_on_end = 0
@@ -770,7 +770,7 @@ connected_to_id = -1
 message_speaker_id = "Senhorinha"
 message_speaker_variant = "Senhorinha"
 message_voice_clip = ""
-message_text = "Chefe: Muito obrigada, meu querido... Você é uma graça, os jovens deveriam ser mais como você."
+message_text = "Cliente: Muito obrigada, meu querido... Você é uma graça, os jovens deveriam ser mais como você."
 message_voice_clip_locales = {}
 message_text_locales = {}
 message_hide_on_end = 0
@@ -1062,6 +1062,22 @@ options = []
 continue_sequence_id = -1
 continue_port_index = 0
 
+[sub_resource type="Resource" id="Resource_ronjm"]
+script = ExtResource("2_48vp3")
+item_type = 0
+connected_to_id = -1
+message_speaker_id = "protagonista"
+message_speaker_variant = ""
+message_voice_clip = ""
+message_text = "Aqui está, senhora."
+message_voice_clip_locales = {}
+message_text_locales = {}
+message_hide_on_end = 0
+condition_type = 10
+condition_values = []
+effect_type = 10
+effect_values = []
+
 [sub_resource type="Resource" id="k1sf5"]
 script = ExtResource("2_48vp3")
 item_type = 0
@@ -1115,7 +1131,7 @@ script = ExtResource("4_f2ijm")
 sequence_id = 1
 position = Vector2(460, 140)
 comment = ""
-items = [SubResource("k1sf5"), SubResource("1as3o"), SubResource("tr6cn")]
+items = [SubResource("Resource_ronjm"), SubResource("k1sf5"), SubResource("1as3o"), SubResource("tr6cn")]
 options = []
 continue_sequence_id = 2
 continue_port_index = 0
@@ -1233,7 +1249,7 @@ connected_to_id = -1
 message_speaker_id = "Maromba"
 message_speaker_variant = ""
 message_voice_clip = ""
-message_text = "Cliente: É isso mesmo, ela é minha preciosa! Valeu, cara"
+message_text = "Cliente: É isso mesmo, ela é minha preciosa! Valeu, cara!"
 message_voice_clip_locales = {}
 message_text_locales = {}
 message_hide_on_end = 0
