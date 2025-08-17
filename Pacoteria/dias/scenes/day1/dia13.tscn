@@ -1,7 +1,7 @@
-[gd_scene load_steps=16 format=3 uid="uid://b2r0j7rrvcgt2"]
+[gd_scene load_steps=18 format=3 uid="uid://b2r0j7rrvcgt2"]
 
 [ext_resource type="Script" uid="uid://cbyevl4t6qyc3" path="res://dias/scripts/day1/dia1_3.gd" id="1_l4df6"]
-[ext_resource type="Texture2D" uid="uid://bt01x8ob3lok2" path="res://dias/assets/cenario.png" id="2_eg8fl"]
+[ext_resource type="Texture2D" uid="uid://bt01x8ob3lok2" path="res://dias/assets/caixas/cenario.png" id="2_eg8fl"]
 [ext_resource type="Script" uid="uid://c6av3xe4m2ujl" path="res://addons/madtalk/runtime/madtalk_runtime.gd" id="3_2xil5"]
 [ext_resource type="Texture2D" uid="uid://bisxmemjmsq4c" path="res://dias/assets/dialogo_Caixa.png" id="4_d70y7"]
 [ext_resource type="FontFile" uid="uid://qngqj5bn0l41" path="res://fonts/PatrickHand-Regular.ttf" id="5_xj4nt"]
@@ -23,7 +23,11 @@ texture = ExtResource("4_d70y7")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_64kiu"]
 texture = ExtResource("4_d70y7")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_grndh"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v8tpi"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7mgug"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_netya"]
 
 [node name="dia1_3" type="Node2D"]
 script = ExtResource("1_l4df6")
@@ -148,10 +152,23 @@ offset_left = 6.0
 offset_top = -1.0
 offset_right = 100.0
 offset_bottom = 107.0
+theme_override_colors/font_readonly_color = Color(0.27451, 0.0980392, 0.027451, 1)
 theme_override_colors/font_color = Color(0.27451, 0.0980392, 0.027451, 1)
 theme_override_fonts/font = ExtResource("9_64kiu")
 theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxTexture_grndh")
+theme_override_styles/normal = SubResource("StyleBoxTexture_v8tpi")
+theme_override_styles/focus = SubResource("StyleBoxTexture_7mgug")
+theme_override_styles/read_only = SubResource("StyleBoxTexture_netya")
 text = "Dia 1"
+editable = false
+context_menu_enabled = false
+emoji_menu_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+virtual_keyboard_enabled = false
+middle_mouse_paste_enabled = false
+empty_selection_clipboard_enabled = false
 
 [connection signal="pressed" from="end_day" to="end_day" method="_on_endday1_pressed"]

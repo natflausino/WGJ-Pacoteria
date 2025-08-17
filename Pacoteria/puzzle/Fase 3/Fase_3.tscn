@@ -12,7 +12,6 @@
 [ext_resource type="AudioStream" uid="uid://gdjbwadf00oh" path="res://music/Mensagem de Acerto.wav" id="10_pexs5"]
 
 [node name="Fase3" type="Node2D" node_paths=PackedStringArray("RCell")]
-position = Vector2(694, 407)
 script = ExtResource("1_3pm24")
 RCell = [NodePath("CCell1"), NodePath("CCell2"), NodePath("CCell3"), NodePath("CCell4"), NodePath("CCell5"), NodePath("CCell6"), NodePath("CCell7"), NodePath("CCell8")]
 
